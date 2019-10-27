@@ -1,18 +1,35 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <PrimarySection id="home"></PrimarySection>
+    <SummarySection id="about-me"></SummarySection>
+    <AppSection id="apps-and-services"></AppSection>
+    <HistorySection id="history"></HistorySection>
+    <ContactSection id="contact-me"></ContactSection>
   </div>
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
+import AppSection from '../components/sections/AppSection.vue';
+import ContactSection from '../components/sections/ContactSection.vue';
+import HistorySection from '../components/sections/HistorySection.vue';
+import PrimarySection from '../components/sections/PrimarySection.vue';
+import SummarySection from '../components/sections/SummarySection.vue';
 
 export default {
-  name: 'home',
   components: {
-    HelloWorld
+    AppSection,
+    ContactSection,
+    HistorySection,
+    PrimarySection,
+    SummarySection,
   }
 }
 </script>
+
+<style scoped>
+.home {
+  width: 100%;
+  scroll-behavior: smooth;
+  overflow-y: auto;
+}
+</style>

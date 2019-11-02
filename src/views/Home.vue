@@ -2,14 +2,14 @@
   <div class="home">
     <PrimarySection id="home"></PrimarySection>
     <SummarySection id="about-me"></SummarySection>
-    <AppSection id="apps-and-services"></AppSection>
+    <AppServiceSection id="apps-and-services"></AppServiceSection>
     <HistorySection id="history"></HistorySection>
     <ContactSection id="contact-me"></ContactSection>
   </div>
 </template>
 
 <script>
-import AppSection from '../components/sections/AppSection.vue';
+import AppServiceSection from '../components/sections/AppServiceSection.vue';
 import ContactSection from '../components/sections/ContactSection.vue';
 import HistorySection from '../components/sections/HistorySection.vue';
 import PrimarySection from '../components/sections/PrimarySection.vue';
@@ -17,7 +17,7 @@ import SummarySection from '../components/sections/SummarySection.vue';
 
 export default {
   components: {
-    AppSection,
+    AppServiceSection,
     ContactSection,
     HistorySection,
     PrimarySection,

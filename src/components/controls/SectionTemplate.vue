@@ -7,11 +7,12 @@
 
       <span class="description">
         <slot name="description"></slot>
-      </span>
+        <div class="underline"></div>
+      </span> 
     </div>
 
     <div class="content">
-      
+      <slot></slot>
     </div>
   </div>
 </template>
@@ -29,5 +30,13 @@
 }
 .description {
   font-size: 18px;
+  display: flex;
+  flex-direction: row;
+}
+.underline {
+  background-color: orange;
+  height: 3px;
+  width: 400px;
+  margin-left: 50px;
 }
 </style>

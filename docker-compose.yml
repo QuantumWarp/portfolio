@@ -1,0 +1,11 @@
+version: '3.7'
+services:
+  web:
+    container_name: 'portfolio'
+    build: .
+    networks:
+      - proxy
+
+networks:
+  proxy:
+    name: proxy

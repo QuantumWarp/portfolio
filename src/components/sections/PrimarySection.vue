@@ -2,7 +2,7 @@
   <div class="primary-section">
     <div class="background">
       <div class="background-layer"></div>
-      <img class="background-image" src="http://wallpaperask.com/wp-content/uploads/1920x1080-HD-Backgrounds.png"/>
+      <img class="background-image" src="https://wallpaperask.com/wp-content/uploads/1920x1080-HD-Backgrounds.png"/>
     </div>
     
     <div class="content">

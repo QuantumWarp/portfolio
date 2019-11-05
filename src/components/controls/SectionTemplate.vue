@@ -24,6 +24,7 @@
 .header {
   display: flex;
   flex-direction: column;
+  margin-bottom: 50px;
 }
 .title {
   font-size: 40px;

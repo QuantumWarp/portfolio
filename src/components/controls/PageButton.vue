@@ -1,3 +1,5 @@
 <template>
-  <div>PageButton</div>
+  <button>
+    <slot></slot>
+  </button>
 </template>

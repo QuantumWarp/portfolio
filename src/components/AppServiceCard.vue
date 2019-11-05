@@ -22,6 +22,7 @@ export default {
   border: 1px solid lightgrey;
   display: flex;
   flex-direction: column;
+  cursor: pointer;
 }
 .app-service-card:hover {
   box-shadow: 0 0 10px;

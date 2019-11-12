@@ -7,8 +7,11 @@
     <input type="text" placeholder="Email" />
     <textarea cols="40" rows="5" placeholder="Message"></textarea>
 
-
-    <PageButton>Send Message</PageButton>
+    <div class="send">
+      <PageButton icon="envelope">
+        Send Message
+      </PageButton>
+    </div>
   </SectionTemplate>
 </template>
 
@@ -33,5 +36,9 @@ input[type=text], textarea {
   border-radius: 4px;
   box-sizing: border-box;
   font-family: inherit;
+}
+.send {
+  display: flex;
+  justify-content: flex-end;
 }
 </style>

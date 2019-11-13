@@ -1,8 +1,10 @@
 <template>
-  <div class="app-service-card">
+  <div class="app-service-card" @click="navigateToApp">
     <img :src="imgSrc"/>
     <span class="name">{{ name }}</span>
-    <span class="description">{{ description }}</span>
+    <span class="description">
+      <slot name="description"></slot>
+    </span>
   </div>
 </template>
 
@@ -10,23 +12,33 @@
 export default {
   props: {
     imgSrc: String,
+    appUrl: String,
     name: String,
     description: String,
-  }
+  },
+  methods: {
+    navigateToApp() {
+      window.location.href = this.appUrl;
+    }
+  },
 }
 </script>
 <style scoped>
 .app-service-card {
+  position: relative;
   width: 400px;
   border-radius: 3px;
   border: 1px solid lightgrey;
   display: flex;
   flex-direction: column;
   cursor: pointer;
+  top: 0;
+  transition: all 0.1s;
 }
 .app-service-card:hover {
-  box-shadow: 0 0 10px;
-  transition: box-shadow 0.3s;
+  box-shadow: 0px 5px 10px -5px;
+  top: -10px;
+  transition: all 0.3s;
 }
 .app-service-card > img {
   border-radius: 3px 3px 0px 0px;

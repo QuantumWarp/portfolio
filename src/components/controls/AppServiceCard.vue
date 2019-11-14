@@ -28,6 +28,7 @@ export default {
   position: relative;
   width: 400px;
   border-radius: 3px;
+  background-color: white;
   border: 1px solid lightgrey;
   display: flex;
   flex-direction: column;

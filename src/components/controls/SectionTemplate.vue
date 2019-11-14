@@ -1,5 +1,5 @@
 <template>
-  <div class="section-template">
+  <div class="section-template" :class="shaded ? 'shaded' : ''">
     <div class="header">
       <span class="title">
         <slot name="title"></slot>
@@ -7,7 +7,6 @@
 
       <span class="description">
         <slot name="description"></slot>
-        <div class="underline"></div>
       </span> 
     </div>
 
@@ -17,11 +16,24 @@
   </div>
 </template>
 
+<script>
+export default {
+  props: {
+    shaded: Boolean,
+  },
+}
+</script>
+
 <style scoped>
+.shaded {
+  background-color: rgb(240, 240, 240);
+}
 .section-template {
-  padding: 20px 10%;
+  padding: 40px 10%;
 }
 .header {
+  border-left: 6px orange solid;
+  padding-left: 20px;
   display: flex;
   flex-direction: column;
   margin-bottom: 50px;

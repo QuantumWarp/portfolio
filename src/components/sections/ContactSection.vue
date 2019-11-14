@@ -1,5 +1,5 @@
 <template>
-  <SectionTemplate>
+  <SectionTemplate :shaded="true">
     <template slot="title">Contact Me</template>
     <template slot="description">Don't hesitate to send me a message</template>
 

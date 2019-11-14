@@ -1,5 +1,5 @@
 <template>
-  <SectionTemplate>
+  <SectionTemplate :shaded="true">
     <template slot="title">Apps and Services</template>
     <template slot="description">Creations I have made</template>
 

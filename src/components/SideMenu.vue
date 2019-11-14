@@ -37,12 +37,13 @@ export default {
 }
 
 .side-menu .top {
-  flex: 1;
+  flex: 2;
 }
 
 .side-menu .list {
   flex: 4;
   flex-direction: column;
-  padding-left: calc(50% - 60px);
+  display: flex;
+  align-items: center;
 }
 </style>

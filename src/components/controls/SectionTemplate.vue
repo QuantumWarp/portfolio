@@ -29,14 +29,14 @@ export default {
   background-color: rgb(240, 240, 240);
 }
 .section-template {
-  padding: 40px 10%;
+  padding: 60px 10%;
 }
 .header {
   border-left: 6px orange solid;
   padding-left: 20px;
   display: flex;
   flex-direction: column;
-  margin-bottom: 50px;
+  margin-bottom: 40px;
 }
 .title {
   font-size: 40px;

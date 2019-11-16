@@ -18,7 +18,8 @@
       
       <HistoryNode
         date="July 2017"
-        company="Serenity Holidays">
+        company="Serenity Holidays"
+        :collapsed="true">
         <span slot="description">
           Suspendisse eget enim tortor. Curabitur volutpat ac massa ut dapibus. Morbi a erat sed risus posuere pellentesque in in lacus. Donec ac diam at mauris ultrices tempus. Integer fringilla diam non urna faucibus suscipit. Nullam eu urna non odio condimentum feugiat. Nunc maximus sapien nunc, sit amet hendrerit odio convallis vel. Etiam ipsum magna, condimentum sed urna a, lacinia iaculis nisi. Curabitur consequat lectus urna, ut sodales neque gravida vel. Integer pellentesque commodo sapien, eu tempor risus interdum in. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec pulvinar dolor at volutpat efficitur. In rhoncus congue dapibus.
         </span>

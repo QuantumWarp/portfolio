@@ -1,16 +1,18 @@
 <template>
   <div id="app">
     <SideMenu></SideMenu>
-    <router-view/>
+    <Home></Home>
   </div>
 </template>
 
 <script>
+import Home from './views/Home.vue';
 import SideMenu from './components/SideMenu.vue';
 
 export default {
   components: {
-    SideMenu
+    Home,
+    SideMenu,
   }
 }
 </script>
@@ -23,7 +25,6 @@ html, body, #app {
   height: 100%;
   width: 100%;
 }
-
 #app {
   font-family: 'Montserrat';
   -webkit-font-smoothing: antialiased;

@@ -25,7 +25,7 @@ export default {
     HistorySection,
     PrimarySection,
     SummarySection,
-  }
+  },
 }
 </script>
 

@@ -20,7 +20,7 @@ import SideMenuItem from './controls/SideMenuItem.vue';
 export default {
   components: {
     SideMenuItem
-  }
+  },
 }
 </script>
 

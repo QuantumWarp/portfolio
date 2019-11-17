@@ -26,7 +26,7 @@ export default {
 
 <style scoped>
 .side-menu {
-  width: 350px;
+  min-width: 300px;
   color: grey;
   height: 100%;
   background-color: rgb(0, 0, 64);
@@ -35,15 +35,18 @@ export default {
   flex-direction: column;
   z-index: 1;
 }
-
 .side-menu .top {
   flex: 2;
 }
-
 .side-menu .list {
   flex: 4;
   flex-direction: column;
   display: flex;
   align-items: center;
+}
+@media only screen and (max-width: 967px) {
+  .side-menu {
+    display: none;
+  }
 }
 </style>

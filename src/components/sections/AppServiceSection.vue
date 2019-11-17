@@ -37,7 +37,7 @@ export default {
   components: {
     SectionTemplate,
     AppServiceCard,
-  }
+  },
 }
 </script>
 

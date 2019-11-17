@@ -31,12 +31,12 @@ export default {
 	position: absolute;
 	opacity: 0;
 	overflow: hidden;
-  transition: all 1s ease-in;
+  transition: opacity 1s ease-in;
 }
 
 .text-rotator > span.active {
 	opacity: 1;
   height: 60px;
-  transition: all 1s ease-in;
+  transition: opacity 1s ease-in;
 }
 </style>

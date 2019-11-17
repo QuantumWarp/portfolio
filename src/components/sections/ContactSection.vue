@@ -3,12 +3,12 @@
     <template slot="title">Contact Me</template>
     <template slot="description">Don't hesitate to send me a message</template>
 
-    <input type="text" placeholder="Email" />
-    <input type="text" placeholder="Email" />
-    <textarea cols="40" rows="5" placeholder="Message"></textarea>
+    <input type="text" placeholder="Subject" v-model="subject" />
+
+    <textarea cols="40" rows="5" placeholder="Message" v-model="message"></textarea>
 
     <div class="send">
-      <PageButton icon="envelope">
+      <PageButton icon="envelope" @click="sendEmail">
         Send Message
       </PageButton>
     </div>
@@ -23,6 +23,18 @@ export default {
   components: {
     SectionTemplate,
     PageButton,
+  },
+  data: () => ({
+    subject: '',
+    message: '',
+  }),
+  methods: {
+    sendEmail() {
+      const email = atob('ancubG93dGhlckBob3RtYWlsLmNvLnVr');
+      const subject = `subject=${encodeURIComponent(this.subject)}`;
+      const message = `body=${encodeURIComponent(this.message)}`;
+      window.location.href = `mailto:${email}?${subject}&${message}`;
+    },
   },
 }
 </script>

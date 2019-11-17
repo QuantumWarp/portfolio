@@ -4,7 +4,7 @@
     <template slot="description">An overview of my experience</template>
 
     <div>
-      <HistoryNode
+      <HistoryNode end="top"
         date="April 2019"
         company="Lead Forensics">
         <span slot="description">
@@ -66,7 +66,7 @@
         <img slot="images" src="@/assets/company-logos/fdm.png" />
       </HistoryNode>
 
-      <HistoryNode
+      <HistoryNode end="bottom"
         date="2010"
         company="University of Southampton"
         :collapsed="true">

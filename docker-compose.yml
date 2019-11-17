@@ -5,7 +5,7 @@ services:
     build: .
     networks:
       - proxy
-    restart: unless-stopped
+    restart: always
 
 networks:
   proxy:

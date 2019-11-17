@@ -1,5 +1,5 @@
 <template>
-  <div class="page-button">
+  <div class="page-button" @click="$emit('click', $event)">
     <v-icon v-if="icon" class="icon" :name="icon" scale="1.8"/>
     <slot></slot>
   </div>

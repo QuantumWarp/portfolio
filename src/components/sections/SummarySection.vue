@@ -7,9 +7,15 @@
       <img class="action-picture" src="@/assets/action-picture.jpg"/>
 
       <div class="right-content">
-        <span>
-          Suspendisse eget enim tortor. Curabitur volutpat ac massa ut dapibus. Morbi a erat sed risus posuere pellentesque in in lacus. Donec ac diam at mauris ultrices tempus. Integer fringilla diam non urna faucibus suscipit. Nullam eu urna non odio condimentum feugiat. Nunc maximus sapien nunc, sit amet hendrerit odio convallis vel. Etiam ipsum magna, condimentum sed urna a, lacinia iaculis nisi. Curabitur consequat lectus urna, ut sodales neque gravida vel. Integer pellentesque commodo sapien, eu tempor risus interdum in. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec pulvinar dolor at volutpat efficitur. In rhoncus congue dapibus.
+        <span class="summary-text">
+          Hi,
         </span>
+
+        <div class="main-points">
+          <span>6 years expierence in the industry</span>
+          <span>Proficient in multiple languages and technologies</span>
+          <span>Designing and implementing full solutions</span>
+        </div>
 
         <div class="download">
           <PageButton>Download CV</PageButton>
@@ -42,7 +48,31 @@ export default {
   flex-direction: row;
 }
 .right-content {
+  padding: 50px;
+  font-size: 18px;
+  line-height: 1.5;
+  display: flex;
+  flex-direction: column;
+}
+.main-points {
+  margin-top: 20px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
   margin-left: 50px;
+}
+.main-points > span {
+  position: relative;
+}
+.main-points > span::before{
+  content: '';
+  position: absolute;
+  border-radius: 50%;
+  background-color: black;
+  top: 10px;
+  left: -10px;
+  height: 5px;
+  width: 5px;  
 }
 .download {
   display: flex;

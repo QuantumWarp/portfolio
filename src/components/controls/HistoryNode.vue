@@ -1,9 +1,9 @@
 <template>
-  <div class="history-node" :class="collapsed ? 'collapsed' : ''">
+  <div class="history-node" :class="coll ? 'collapsed' : ''">
     <div class="date-info">{{ date }}</div>
 
-    <div class="divider">
-      <div class="item-dot" @click="collapsed = !collapsed"></div>
+    <div class="divider" :class="end">
+      <div class="item-dot" @click="coll = !coll"></div>
     </div>
 
     <div class="right-info">
@@ -27,6 +27,13 @@ export default {
     company: String,
     link: String,
     collapsed: Boolean,
+    end: String, // 'top' or 'bottom'
+  },
+  data: () => ({
+    coll: false,
+  }),
+  mounted() {
+    this.coll = this.collapsed;
   },
 }
 </script>
@@ -36,7 +43,6 @@ export default {
   display: flex;
   flex-direction: row;
   height: 200px;
-  overflow: hidden;
   transition: all 0.5s ease-in-out;
 }
 .history-node.collapsed {
@@ -62,6 +68,15 @@ export default {
   left: 50%;
   margin-left: -3px;
 }
+.divider.top::after  {
+  border-radius: 4px 4px 0px 0px;
+  top: -10px;
+  height: calc(100% + 10px);
+}
+.divider.bottom::after  {
+  border-radius: 0px 0px 8px 8px;
+  height: calc(100% + 15px);
+}
 .divider .item-dot {
   cursor: pointer;
   border-radius: 50%;
@@ -77,6 +92,7 @@ export default {
 }
 .right-info {
   position: relative;
+  overflow: hidden;
   flex: 14;
   padding-top: 15px;
 }

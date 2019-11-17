@@ -18,6 +18,9 @@ export default {
 </script>
 
 <style lang="scss">
+:root {
+  --color-primary: orange;
+}
 html, body, #app {
   margin: 0;
   padding: 0;

@@ -7,10 +7,12 @@
     
     <div class="content">
       <img class="profile-picture" src="@/assets/profile-picture.jpg"/>
+      
       <span class="name">
         <span class="first-name">John </span>
         <span class="last-name">Lowther</span>
       </span>
+
       <span class="one-liner">
         I am a 
         <TextRotator class="iama" :words="[
@@ -19,15 +21,18 @@
         ]"></TextRotator>
       </span>
 
+      <MoveDownButton class="move-down" page-link="about-me"></MoveDownButton>
     </div>
   </div>
 </template>
 
 <script>
+import MoveDownButton from '../controls/MoveDownButton.vue';
 import TextRotator from '../controls/TextRotator.vue';
 
 export default {
   components: {
+    MoveDownButton,
     TextRotator,
   },
 }
@@ -89,6 +94,11 @@ export default {
   margin-left: 6px;
 	color: orange;
   font-weight: 600;
+}
+.move-down {
+  position: absolute;
+  z-index: 1;
+  bottom: 2vh;
 }
 @media only screen and (max-width: 992px) {
   .name {

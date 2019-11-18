@@ -12,6 +12,7 @@ export default {
   },
 }
 </script>
+
 <style scoped>
 .page-button {
   font-size: 20px;

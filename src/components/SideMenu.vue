@@ -1,7 +1,7 @@
 <template>
   <div class="side-menu">
     <div class="top">
-      ICON
+      <v-icon name="balance-scale" scale="10"/>
     </div>
 
     <div class="list">
@@ -11,6 +11,8 @@
       <SideMenuItem page-link="history">History</SideMenuItem>
       <SideMenuItem page-link="contact-me">Contact</SideMenuItem>
     </div>
+
+    <div class="social-links"></div>
   </div>
 </template>
 
@@ -37,9 +39,14 @@ export default {
 }
 .side-menu .top {
   flex: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid grey;
 }
 .side-menu .list {
-  flex: 4;
+  flex: 6;
+  margin-top: 10vh;
   flex-direction: column;
   display: flex;
   align-items: center;

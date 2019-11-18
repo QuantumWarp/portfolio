@@ -95,6 +95,7 @@ export default {
   overflow: hidden;
   flex: 14;
   padding-top: 15px;
+  padding-right: 50px;
 }
 .content::before {
   transition: all 0.5s ease-in-out;
@@ -128,5 +129,6 @@ export default {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-left: 40px;
 }
 </style>

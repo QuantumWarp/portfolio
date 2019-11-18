@@ -3,8 +3,8 @@
     <template slot="title">Apps and Services</template>
     <template slot="description">Creations I have made</template>
 
-    <div class="app-tiles">
-      <AppServiceCard
+    <div class="app-tiles row">
+      <AppServiceCard class="column"
         name="Fractal Viewer"
         appUrl="https://fractal.quantumwss.com"
         :imgSrc="require('@/assets/fractal-viewer-tile.png')">
@@ -15,7 +15,7 @@
         </template>
       </AppServiceCard>
       
-      <AppServiceCard
+      <AppServiceCard class="column"
         name="MTG Card Organizer"
         appUrl="https://mtg.quantumwss.com"
         :imgSrc="require('@/assets/mtg-card-organizer-tile.png')">
@@ -43,8 +43,7 @@ export default {
 
 <style scoped>
 .app-tiles {
-  display: flex;
-  flex-direction: row;
+  justify-content: center;
 }
 .app-tiles > * {
   margin: 10px;

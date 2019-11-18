@@ -3,12 +3,12 @@
     <template slot="title">About Me</template>
     <template slot="description">About Me</template>
 
-    <div class="content">
-      <img class="action-picture" src="@/assets/action-picture.jpg"/>
+    <div class="content row">
+      <img class="action-picture column" src="@/assets/action-picture.jpg"/>
 
-      <div class="right-content">
+      <div class="right-content column">
         <span class="summary-text">
-          Hi,
+          Hi, summary summary summary summary summary summary summary summary summary summary summary summary summary summary summary summary 
         </span>
 
         <div class="main-points">
@@ -40,8 +40,9 @@ export default {
 <style scoped>
 .action-picture {
   object-fit: cover;
-  width: 350px;
+  max-width: 50%;
   height: 450px;
+  max-height: 80vw;
 }
 .content {
   display: flex;
@@ -77,5 +78,10 @@ export default {
 .download {
   display: flex;
   justify-content: flex-end;
+}
+@media screen and (max-width: 992px) {
+  .action-picture {
+    max-width: 100%;
+  }
 }
 </style>

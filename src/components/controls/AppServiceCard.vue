@@ -26,7 +26,7 @@ export default {
 <style scoped>
 .app-service-card {
   position: relative;
-  width: 400px;
+  max-width: 400px;
   border-radius: 3px;
   background-color: white;
   border: 1px solid lightgrey;
@@ -44,6 +44,7 @@ export default {
 .app-service-card > img {
   border-radius: 3px 3px 0px 0px;
   object-fit: cover;
+  max-width: 100%;
   height: 200px;
 }
 .app-service-card > .name {

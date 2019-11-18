@@ -44,7 +44,7 @@ export default {
   display: flex;
   align-items: center;
 }
-@media only screen and (max-width: 967px) {
+@media only screen and (max-width: 800px) {
   .side-menu {
     display: none;
   }

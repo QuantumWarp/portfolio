@@ -29,7 +29,7 @@ export default {
   background-color: rgb(240, 240, 240);
 }
 .section-template {
-  padding: 60px 10%;
+  padding: 60px 5%;
 }
 .header {
   border-left: 6px orange solid;

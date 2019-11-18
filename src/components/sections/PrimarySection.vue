@@ -90,7 +90,7 @@ export default {
 	color: orange;
   font-weight: 600;
 }
-@media only screen and (max-width: 967px) {
+@media only screen and (max-width: 992px) {
   .name {
     font-size: 10vw;
   }

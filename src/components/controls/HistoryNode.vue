@@ -49,9 +49,13 @@ export default {
   height: 50px;
 }
 .date-info {
-  flex: 2;
-  padding-top: 22px;
+  width: 80px;
+  padding-top: 10px;
+  height: 38px;
+  display: flex;
   text-align: right;
+  justify-content: flex-end;
+  align-items: center;
 }
 .divider {
   margin: 0px 10px;
@@ -93,7 +97,7 @@ export default {
 .right-info {
   position: relative;
   overflow: hidden;
-  flex: 14;
+  flex: 1;
   padding-top: 15px;
   padding-right: 50px;
 }
@@ -130,5 +134,10 @@ export default {
   justify-content: center;
   align-items: center;
   margin-left: 40px;
+}
+@media only screen and (max-width: 992px) {
+  .date-info {
+    width: 40px;
+  }
 }
 </style>

@@ -104,4 +104,9 @@ export default {
 img {
   width: 150px;
 }
+@media only screen and (max-width: 992px) {
+  .history-area {
+    max-width: 100%;
+  }
+}
 </style>

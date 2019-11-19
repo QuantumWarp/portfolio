@@ -51,7 +51,7 @@ export default {
   display: flex;
   align-items: center;
 }
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 1200px) {
   .side-menu {
     display: none;
   }

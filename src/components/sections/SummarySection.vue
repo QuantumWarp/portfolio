@@ -83,5 +83,15 @@ export default {
   .action-picture {
     max-width: 100%;
   }
+  .right-content {
+    padding: 20px 10px;
+  }
+  .main-points {
+    margin: 20px 0px 20px 20px;
+  }
+  .download {
+    display: flex;
+    justify-content: center;
+  }
 }
 </style>

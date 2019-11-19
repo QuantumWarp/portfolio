@@ -22,7 +22,9 @@
           company="Serenity Holidays"
           :collapsed="true">
           <span slot="description">
-            Suspendisse eget enim tortor. Curabitur volutpat ac massa ut dapibus. Morbi a erat sed risus posuere pellentesque in in lacus. Donec ac diam at mauris ultrices tempus. Integer fringilla diam non urna faucibus suscipit. Nullam eu urna non odio condimentum feugiat. Nunc maximus sapien nunc, sit amet hendrerit odio convallis vel. Etiam ipsum magna, condimentum sed urna a, lacinia iaculis nisi. Curabitur consequat lectus urna, ut sodales neque gravida vel. Integer pellentesque commodo sapien, eu tempor risus interdum in. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec pulvinar dolor at volutpat efficitur. In rhoncus congue dapibus.
+            At this company I was in a project to rebuild a legacy system from the ground up.
+            Taking on a leadership role within the team, I made significant contributions towards the project using up to date technology including .NET Core
+            and Angular 2+.
           </span>
           <img slot="images" src="@/assets/company-logos/serenity-holidays.png" />
         </HistoryNode>
@@ -32,8 +34,9 @@
           company="Nxtera"
           :collapsed="true">
           <span slot="description">
-            Nulla non sapien feugiat, pellentesque dui vitae, condimentum nunc. Quisque bibendum libero erat, nec tempus augue tristique ac. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nulla placerat posuere turpis, eget placerat odio dapibus eu. Duis sit amet quam sed justo faucibus rhoncus eget a arcu. Curabitur tincidunt neque magna, ut aliquam ante consequat vitae. Vestibulum non nunc elementum sem eleifend egestas. Quisque sem purus, vehicula sed mauris a, ornare dignissim neque. Mauris nec sapien in turpis euismod tempor vel ac massa. Duis vitae tellus et diam rhoncus imperdiet vitae a augue.
-          </span>
+            During my time here I was working on a multi platform software solution that monitors and tests different aspects of telephone systems and voice recorders.
+            The primary language used throughout was C#.
+            </span>
           <img slot="images" src="@/assets/company-logos/nxtera-at-verint.jpg" />
         </HistoryNode>
         
@@ -42,7 +45,8 @@
           company="Sony"
           :collapsed="true">
           <span slot="description">
-            Nulla non sapien feugiat, pellentesque dui vitae, condimentum nunc. Quisque bibendum libero erat, nec tempus augue tristique ac. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nulla placerat posuere turpis, eget placerat odio dapibus eu. Duis sit amet quam sed justo faucibus rhoncus eget a arcu. Curabitur tincidunt neque magna, ut aliquam ante consequat vitae. Vestibulum non nunc elementum sem eleifend egestas. Quisque sem purus, vehicula sed mauris a, ornare dignissim neque. Mauris nec sapien in turpis euismod tempor vel ac massa. Duis vitae tellus et diam rhoncus imperdiet vitae a augue.
+            During my time here I was primarily fixing bugs on various projects relating to Sony's Media Backbone Conductor using Java, webMethods and Linux.
+            One of the larger projects while there involved setting up an array of linux scripts that would fully deploy the application.
           </span>
           <img slot="images" src="@/assets/company-logos/sony.png" />
         </HistoryNode>
@@ -52,7 +56,8 @@
           company="Barclays"
           :collapsed="true">
           <span slot="description">
-            Nulla non sapien feugiat, pellentesque dui vitae, condimentum nunc. Quisque bibendum libero erat, nec tempus augue tristique ac. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nulla placerat posuere turpis, eget placerat odio dapibus eu. Duis sit amet quam sed justo faucibus rhoncus eget a arcu. Curabitur tincidunt neque magna, ut aliquam ante consequat vitae. Vestibulum non nunc elementum sem eleifend egestas. Quisque sem purus, vehicula sed mauris a, ornare dignissim neque. Mauris nec sapien in turpis euismod tempor vel ac massa. Duis vitae tellus et diam rhoncus imperdiet vitae a augue.
+            My main role was to assist with both feature development and bug fixing and for the Windows Pingit mobile app which was hitting a 4.5/5 star rating on the app store.
+            I received a lot of exposure to the testing, design and support aspects of the various applications as part of a large organization.
           </span>
           <img slot="images" src="@/assets/company-logos/barclays.png" />
         </HistoryNode>
@@ -62,7 +67,9 @@
           company="Training at FDM Group"
           :collapsed="true">
           <span slot="description">
-            Nulla non sapien feugiat, pellentesque dui vitae, condimentum nunc. Quisque bibendum libero erat, nec tempus augue tristique ac. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nulla placerat posuere turpis, eget placerat odio dapibus eu. Duis sit amet quam sed justo faucibus rhoncus eget a arcu. Curabitur tincidunt neque magna, ut aliquam ante consequat vitae. Vestibulum non nunc elementum sem eleifend egestas. Quisque sem purus, vehicula sed mauris a, ornare dignissim neque. Mauris nec sapien in turpis euismod tempor vel ac massa. Duis vitae tellus et diam rhoncus imperdiet vitae a augue.
+            My development career began at this IT consultancy company, where I was initially trained in Java, SQL and Unix.
+            I completed various training in the fundamental principles of working in the software development industry.
+            I was placed onto an accelerated training program and successfully completed all the modules at the required grades.
           </span>
           <img slot="images" src="@/assets/company-logos/fdm.png" />
         </HistoryNode>
@@ -72,7 +79,7 @@
           company="University of Southampton"
           :collapsed="true">
           <span slot="description">
-            Nulla non sapien feugiat, pellentesque dui vitae, condimentum nunc. Quisque bibendum libero erat, nec tempus augue tristique ac. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nulla placerat posuere turpis, eget placerat odio dapibus eu. Duis sit amet quam sed justo faucibus rhoncus eget a arcu. Curabitur tincidunt neque magna, ut aliquam ante consequat vitae. Vestibulum non nunc elementum sem eleifend egestas. Quisque sem purus, vehicula sed mauris a, ornare dignissim neque. Mauris nec sapien in turpis euismod tempor vel ac massa. Duis vitae tellus et diam rhoncus imperdiet vitae a augue.
+            I studied and aquired my Degree in Mathematics over the course of 3 years at this University.
           </span>
           <img slot="images" src="@/assets/company-logos/university-of-southampton.png" />
         </HistoryNode>
@@ -103,5 +110,10 @@ export default {
 }
 img {
   width: 150px;
+}
+@media only screen and (max-width: 992px) {
+  .history-area {
+    max-width: 100%;
+  }
 }
 </style>

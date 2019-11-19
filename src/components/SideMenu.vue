@@ -38,20 +38,19 @@ export default {
   z-index: 1;
 }
 .side-menu .top {
-  flex: 2;
+  height: 250px;
   display: flex;
   justify-content: center;
   align-items: center;
   border-bottom: 1px solid grey;
 }
 .side-menu .list {
-  flex: 6;
-  margin-top: 10vh;
+  margin-top: 6vh;
   flex-direction: column;
   display: flex;
   align-items: center;
 }
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 1200px) {
   .side-menu {
     display: none;
   }

@@ -3,14 +3,18 @@
     <template slot="title">Contact Me</template>
     <template slot="description">Don't hesitate to send me a message</template>
 
-    <input type="text" placeholder="Subject" v-model="subject" />
+    <div class="container">
+      <div class="content">
+        <input type="text" placeholder="Subject" v-model="subject" />
 
-    <textarea cols="40" rows="5" placeholder="Message" v-model="message"></textarea>
+        <textarea cols="40" rows="5" placeholder="Message" v-model="message"></textarea>
 
-    <div class="send">
-      <PageButton icon="envelope" @click="sendEmail">
-        Send Message
-      </PageButton>
+        <div class="send">
+          <PageButton icon="envelope" @click="sendEmail">
+            Send Message
+          </PageButton>
+        </div>
+      </div>
     </div>
   </SectionTemplate>
 </template>
@@ -52,5 +56,13 @@ input[type=text], textarea {
 .send {
   display: flex;
   justify-content: flex-end;
+}
+.container {
+  display: flex;
+  align-items: center;
+}
+.content {
+  max-width: 800px;
+  width: 100%;
 }
 </style>

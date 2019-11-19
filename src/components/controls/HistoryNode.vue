@@ -9,10 +9,12 @@
     <div class="right-info">
       <div class="company-title">{{ company }}</div>
 
-      <div class="content">
-        <slot name="description"></slot>
+      <div class="content row">
+        <div class="column">
+          <slot name="description"></slot>
+        </div>
 
-        <div class="images">
+        <div class="images column">
           <slot name="images"></slot>
         </div>
       </div>
@@ -42,16 +44,23 @@ export default {
 .history-node {
   display: flex;
   flex-direction: row;
-  height: 200px;
-  transition: all 0.5s ease-in-out;
+  max-height: 250px;
+  transition: all 0.5s ease-out;
+}
+.content.row {
+  justify-content: center;
 }
 .history-node.collapsed {
-  height: 50px;
+  max-height: 50px;
 }
 .date-info {
-  flex: 2;
-  padding-top: 22px;
+  width: 80px;
+  padding-top: 10px;
+  height: 38px;
+  display: flex;
   text-align: right;
+  justify-content: flex-end;
+  align-items: center;
 }
 .divider {
   margin: 0px 10px;
@@ -93,8 +102,8 @@ export default {
 .right-info {
   position: relative;
   overflow: hidden;
-  flex: 14;
-  padding-top: 15px;
+  flex: 1;
+  padding: 15px 0px 15px 0px;
   padding-right: 50px;
 }
 .content::before {
@@ -125,10 +134,25 @@ export default {
   margin-bottom: 10px;
 }
 .images {
-  flex: 2;
+  flex: 0;
   display: flex;
   justify-content: center;
   align-items: center;
   margin-left: 40px;
+}
+@media only screen and (max-width: 992px) {
+  .history-node {
+    max-height: 500px;
+  }
+  .date-info {
+    width: 40px;
+  }
+  .right-info {
+    padding-right: 0px;
+  }
+  .images {
+    margin-top: 10px;
+    margin-left: 0px;
+  }
 }
 </style>

@@ -1,17 +1,19 @@
 <template>
   <div class="section-template" :class="shaded ? 'shaded' : ''">
-    <div class="header">
-      <span class="title">
-        <slot name="title"></slot>
-      </span>
+    <div class="container">
+      <div class="header">
+        <span class="title">
+          <slot name="title"></slot>
+        </span>
 
-      <span class="description">
-        <slot name="description"></slot>
-      </span> 
-    </div>
+        <span class="description">
+          <slot name="description"></slot>
+        </span> 
+      </div>
 
-    <div class="content">
-      <slot></slot>
+      <div class="content">
+        <slot></slot>
+      </div>
     </div>
   </div>
 </template>
@@ -30,6 +32,14 @@ export default {
 }
 .section-template {
   padding: 60px 5%;
+  display: flex;
+  justify-content: center;
+}
+.container {
+  max-width: 1500px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
 }
 .header {
   border-left: 6px orange solid;

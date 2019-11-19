@@ -5,11 +5,30 @@
     </div>
 
     <div class="list">
-      <SideMenuItem page-link="home">Home</SideMenuItem>
-      <SideMenuItem page-link="about-me" previous-page-link="home">About</SideMenuItem>
-      <SideMenuItem page-link="apps-and-services" previous-page-link="about-me">Apps</SideMenuItem>
-      <SideMenuItem page-link="history" previous-page-link="apps-and-services">History</SideMenuItem>
-      <SideMenuItem page-link="contact-me" previous-page-link="history">Contact</SideMenuItem>
+      <SideMenuItem
+        page-link="home"
+        :selected="selectedPageLink === 'home'"
+      >Home</SideMenuItem>
+
+      <SideMenuItem
+        page-link="about-me"
+        :selected="selectedPageLink === 'about-me'"
+      >About</SideMenuItem>
+
+      <SideMenuItem
+        page-link="apps-and-services"
+        :selected="selectedPageLink === 'apps-and-services'"
+      >Apps</SideMenuItem>
+
+      <SideMenuItem
+        page-link="history"
+        :selected="selectedPageLink === 'history'"
+      >History</SideMenuItem>
+
+      <SideMenuItem
+        page-link="contact-me"
+        :selected="selectedPageLink === 'contact-me'"
+      >Contact</SideMenuItem>
     </div>
 
     <div class="social-links"></div>
@@ -22,6 +41,33 @@ import SideMenuItem from './controls/SideMenuItem.vue';
 export default {
   components: {
     SideMenuItem
+  },
+  data: () => ({
+    selectedPageLink: 'home'
+  }),
+  methods: {
+    checkIsActive(elem, previousElem) {
+      const elemRect = elem.getBoundingClientRect();
+      const elemCenter = elemRect.top + elemRect.height / 2;
+
+      if (!previousElem) {
+        this.isActive = elemCenter >= 0;
+        return;
+      }
+
+      const previousElemRect = previousElem.getBoundingClientRect();
+      const previousElemCenter = previousElemRect.top + previousElemRect.height / 2;
+      
+      this.isActive = elemCenter >= 0 && previousElemCenter < 0;
+    },
+  },
+  mounted() {
+    const containerElem = document.getElementById('main-container');
+    const elem = document.getElementById(this.pageLink);
+    const previousElem = document.getElementById(this.previousPageLink);
+    this.checkIsActive(elem, previousElem);
+
+    containerElem.addEventListener('scroll', () => this.checkIsActive(elem, previousElem));
   },
 }
 </script>

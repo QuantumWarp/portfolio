@@ -6,10 +6,10 @@
 
     <div class="list">
       <SideMenuItem page-link="home">Home</SideMenuItem>
-      <SideMenuItem page-link="about-me">About</SideMenuItem>
-      <SideMenuItem page-link="apps-and-services">Apps</SideMenuItem>
-      <SideMenuItem page-link="history">History</SideMenuItem>
-      <SideMenuItem page-link="contact-me">Contact</SideMenuItem>
+      <SideMenuItem page-link="about-me" previous-page-link="home">About</SideMenuItem>
+      <SideMenuItem page-link="apps-and-services" previous-page-link="about-me">Apps</SideMenuItem>
+      <SideMenuItem page-link="history" previous-page-link="apps-and-services">History</SideMenuItem>
+      <SideMenuItem page-link="contact-me" previous-page-link="history">Contact</SideMenuItem>
     </div>
 
     <div class="social-links"></div>

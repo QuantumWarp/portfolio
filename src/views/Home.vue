@@ -1,5 +1,5 @@
 <template>
-  <div class="home">
+  <div class="home" id="main-container">
     <PrimarySection id="home"></PrimarySection>
     <SummarySection id="about-me"></SummarySection>
     <AppServiceSection id="apps-and-services"></AppServiceSection>

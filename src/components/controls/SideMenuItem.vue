@@ -1,5 +1,8 @@
 <template>
-  <div class="side-menu-item" @click="goToPageLink">
+  <div ref="item"
+    class="side-menu-item"
+    :class="isActive ? 'selected' : ''"
+    @click="goToPageLink">
     <slot></slot>
   </div>
 </template>
@@ -8,11 +11,38 @@
 export default {
   props: {
     pageLink: String,
+    previousPageLink: String,
+    currentItem: String,
   },
+  data: () => ({
+    isActive: false,
+  }),
   methods: {
     goToPageLink() {
       location.href = `#${this.pageLink}`;
     },
+    checkIsActive(elem, previousElem) {
+      const elemRect = elem.getBoundingClientRect();
+      const elemCenter = elemRect.top + elemRect.height / 2;
+
+      if (!previousElem) {
+        this.isActive = elemCenter >= 0;
+        return;
+      }
+
+      const previousElemRect = previousElem.getBoundingClientRect();
+      const previousElemCenter = previousElemRect.top + previousElemRect.height / 2;
+      
+      this.isActive = elemCenter >= 0 && previousElemCenter < 0;
+    },
+  },
+  mounted() {
+    const containerElem = document.getElementById('main-container');
+    const elem = document.getElementById(this.pageLink);
+    const previousElem = document.getElementById(this.previousPageLink);
+    this.checkIsActive(elem, previousElem);
+
+    containerElem.addEventListener('scroll', () => this.checkIsActive(elem, previousElem));
   },
 }
 </script>

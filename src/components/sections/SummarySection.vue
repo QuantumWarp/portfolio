@@ -8,7 +8,9 @@
 
       <div class="right-content column">
         <span class="summary-text">
-          Hi, summary summary summary summary summary summary summary summary summary summary summary summary summary summary summary summary 
+          Hi, I'm John.
+          Currently a full time Software Developer working at Lead Forensics.
+          I am both capable and dedicated and will constantly strive to achieve excellence on what ever task or project I am currently working on.
         </span>
 
         <div class="main-points">

@@ -9,12 +9,15 @@
           date="April 2019"
           company="Lead Forensics">
           <span slot="description">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam purus tortor, facilisis at malesuada sed, condimentum non erat. Etiam vestibulum at ex in aliquet. Integer elementum, quam semper lacinia pharetra, massa eros facilisis turpis, eu blandit eros dolor non lectus. Duis sit amet viverra felis, eu pellentesque quam. Quisque ut eros vel tellus pharetra placerat. Donec sollicitudin augue in interdum sollicitudin. Duis felis massa, condimentum eu commodo ac, placerat vitae est.
+            I have been working at Lead Forensics for the past {{durationText(new Date(2019, 1, 1))}} as a Senior Software Developer.
+            For the most part I have been contributing to the product Webeo, a SaaS website personalisation tool.
+            I have had the opportunity to learn numerous up to date technologies, including microservices, Docker and data warehousing, whilst still making
+            my mark using my existing skill set.
           </span>
-          <div slot="images">
+          <template slot="images">
             <img src="@/assets/company-logos/lead-forensics.png" />
             <img src="@/assets/company-logos/webeo.png" />
-          </div>     
+          </template>     
         </HistoryNode>
         
         <HistoryNode
@@ -46,7 +49,7 @@
           :collapsed="true">
           <span slot="description">
             During my time here I was primarily fixing bugs on various projects relating to Sony's Media Backbone Conductor using Java, webMethods and Linux.
-            One of the larger projects while there involved setting up an array of linux scripts that would fully deploy the application.
+            One of the larger projects whilst there involved setting up an array of linux scripts that would fully deploy the application stack.
           </span>
           <img slot="images" src="@/assets/company-logos/sony.png" />
         </HistoryNode>
@@ -79,7 +82,7 @@
           company="University of Southampton"
           :collapsed="true">
           <span slot="description">
-            I studied and aquired my Degree in Mathematics over the course of 3 years at this University.
+            I studied and acquired my Degree in Mathematics over the course of 3 years at this University.
           </span>
           <img slot="images" src="@/assets/company-logos/university-of-southampton.png" />
         </HistoryNode>
@@ -97,16 +100,26 @@ export default {
     HistoryNode,
     SectionTemplate,
   },
+  methods: {
+    durationText(dateStarted) {
+      const durationDifMs = Date.now() - dateStarted;
+      var durationDate = new Date(durationDifMs);
+      // Add months to round to nearest year
+      durationDate.setMonth(durationDate.getMonth() + 6);
+      const years = Math.abs(durationDate.getUTCFullYear() - 1970);      
+      return years > 1 ? `${years} years` : 'year';
+    },
+  },
 }
 </script>
 
 <style scoped>
 .container {
   display: flex;
-  justify-content: center;
+  align-items: center;
 }
 .history-area {
-  max-width: 60vw;
+  max-width: 1200px;
 }
 img {
   width: 150px;

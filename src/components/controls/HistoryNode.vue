@@ -1,22 +1,22 @@
 <template>
   <div class="history-node" :class="coll ? 'collapsed' : ''">
-    <div class="date-info">{{ date }}</div>
+    <div class="date-info" @click="coll = !coll">{{ date }}</div>
 
-    <div class="divider" :class="end">
-      <div class="item-dot" @click="coll = !coll"></div>
+    <div class="divider" @click="coll = !coll" :class="end">
+      <div class="item-dot"></div>
     </div>
 
-    <div class="right-info">
-      <div class="company-title">{{ company }}</div>
+    <div class="right-info row">
+      <div class="content column">
+        <div class="company-title" @click="coll = !coll">{{ company }}</div>
 
-      <div class="content row">
-        <div class="column">
+        <div class="description">
           <slot name="description"></slot>
         </div>
+      </div>
 
-        <div class="images column">
-          <slot name="images"></slot>
-        </div>
+      <div class="images column">
+        <slot name="images"></slot>
       </div>
     </div>
   </div>
@@ -47,13 +47,11 @@ export default {
   max-height: 250px;
   transition: all 0.5s ease-out;
 }
-.content.row {
-  justify-content: center;
-}
 .history-node.collapsed {
-  max-height: 50px;
+  max-height: 45px;
 }
 .date-info {
+  cursor: pointer;
   width: 80px;
   padding-top: 10px;
   height: 38px;
@@ -63,7 +61,8 @@ export default {
   align-items: center;
 }
 .divider {
-  margin: 0px 10px;
+  cursor: pointer;
+  padding: 0px 10px;
   position: relative;
 }
 .divider::after {
@@ -103,7 +102,7 @@ export default {
   position: relative;
   overflow: hidden;
   flex: 1;
-  padding: 15px 0px 15px 0px;
+  padding: 12px 0px 15px 0px;
   padding-right: 50px;
 }
 .content::before {
@@ -115,21 +114,22 @@ export default {
   border-radius: 30%;
   width: 100%;
   background-image: linear-gradient(90deg, rgba(255, 255, 255) 0%, rgba(100, 100, 100) 50%, rgba(255, 255, 255) 100%);
-  top: 4px;
+  top: 2px;
 }
 .history-node.collapsed .right-info::before {
   opacity: 0;
 }
-.content {
+.description, .images {
   transition: all 0.5s ease-in-out;
-  display: flex;
-  flex-direction: row;
   opacity: 1;
 }
-.history-node.collapsed .content {
+.history-node.collapsed .description,
+.history-node.collapsed .images,
+.history-node.collapsed .content::before {
   opacity: 0;
 }
 .company-title {
+  cursor: pointer;
   font-size: 25px;
   margin-bottom: 10px;
 }
@@ -151,8 +151,10 @@ export default {
     padding-right: 0px;
   }
   .images {
+    flex: 1;
     margin-top: 10px;
     margin-left: 0px;
+    margin-right: 30px;
   }
 }
 </style>

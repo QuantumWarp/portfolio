@@ -8,8 +8,7 @@
 
       <div class="right-content column">
         <span class="summary-text">
-          Hi, I'm John.
-          Currently a full time Software Developer working at Lead Forensics.
+          Hi, I'm John, currently a full time Software Developer working at Lead Forensics.
           I am both capable and dedicated and will constantly strive to achieve excellence on what ever task or project I am currently working on.
         </span>
 
@@ -39,7 +38,7 @@ export default {
 }
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 .action-picture {
   object-fit: cover;
   max-width: 50%;
@@ -63,19 +62,21 @@ export default {
   display: flex;
   flex-direction: column;
   margin-left: 50px;
-}
-.main-points > span {
-  position: relative;
-}
-.main-points > span::before{
-  content: '';
-  position: absolute;
-  border-radius: 50%;
-  background-color: black;
-  top: 10px;
-  left: -10px;
-  height: 5px;
-  width: 5px;  
+
+  > span {
+    position: relative;
+  }
+  
+  > span::before{
+    content: '';
+    position: absolute;
+    border-radius: 50%;
+    background-color: black;
+    top: 10px;
+    left: -10px;
+    height: 5px;
+    width: 5px;  
+  }
 }
 .download {
   display: flex;

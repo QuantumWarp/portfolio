@@ -1,7 +1,5 @@
 <template>
-  <div class="footer-section">
-
-  </div>
+  <div class="footer-section"></div>
 </template>
 
 <style scoped>

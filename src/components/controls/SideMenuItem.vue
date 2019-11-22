@@ -17,26 +17,30 @@ export default {
 }
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 .side-menu-item {
   position: relative;
   font-size: 22px;
   font-weight: 600;
+  height: 35px;
   padding: 5px 0px;
   user-select: none;
-}
-.side-menu-item:hover {
-  color: orange;
-  cursor: pointer;
+  display: flex;
+  align-items: center;
+
+  &:hover {
+    color: var(--color-secondary);
+    cursor: pointer;
+  }
 }
 .side-menu-item::before {
   content: '';
   position: absolute;
   width: 0px;
-  top: 50%;
+  top: calc(50% - 1px);
   left: -60px;
   height: 3px;
-  background-image: linear-gradient(to right, transparent 0%, orange);
+  background-image: linear-gradient(to right, transparent 0%, var(--color-secondary));
   border-radius: 50% 30% 30% 50%;
 }
 .side-menu-item:hover::before {
@@ -47,10 +51,10 @@ export default {
   content: '';
   position: absolute;
   width: 0px;
-  top: 50%;
+  top: calc(50% - 1px);
   right: -60px;
   height: 3px;
-  background-image: linear-gradient(to right, orange 0%, transparent);
+  background-image: linear-gradient(to right, var(--color-secondary) 0%, transparent);
   border-radius: 30% 50% 50% 30%;
 }
 .side-menu-item:hover::after {

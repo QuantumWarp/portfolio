@@ -84,7 +84,7 @@ export default {
   font-size: 60px;
 }
 .last-name {
-  color: orange;
+  color: var(--color-secondary);
 }
 .one-liner {
   font-size: 24px;
@@ -92,7 +92,7 @@ export default {
 }
 .iama {
   margin-left: 6px;
-	color: orange;
+	color: var(--color-secondary);
   font-weight: 600;
 }
 .move-down {

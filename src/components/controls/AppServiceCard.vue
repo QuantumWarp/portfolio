@@ -1,7 +1,9 @@
 <template>
   <div class="app-service-card" @click="navigateToApp">
     <img :src="imgSrc"/>
+
     <span class="name">{{ name }}</span>
+
     <span class="description">
       <slot name="description"></slot>
     </span>
@@ -23,6 +25,7 @@ export default {
   },
 }
 </script>
+
 <style scoped>
 .app-service-card {
   position: relative;

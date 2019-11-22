@@ -28,11 +28,11 @@ export default {
 
 <style scoped>
 .side-menu {
+  text-transform: uppercase;
   min-width: 300px;
-  color: grey;
+  color: rgb(240, 240, 240);
   height: 100%;
-  background-color: rgb(0, 0, 64);
-  opacity: 0.9;
+  background-color: var(--color-primary);
   display: flex;
   flex-direction: column;
   z-index: 1;

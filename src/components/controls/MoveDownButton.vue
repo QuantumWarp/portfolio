@@ -20,7 +20,7 @@ export default {
 }
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 .container {
   cursor: pointer;
   padding: 40px;
@@ -30,14 +30,15 @@ export default {
   top: 0;
   animation: .8s bounce 1s;
   transition: top .3s;
+
+  :nth-child(2) {
+    position: relative;
+    top: -15px;
+  }
 }
 .container:hover .button {
   top: 10px;
   transition: top .3s;
-}
-.button :nth-child(2) {
-  position: relative;
-  top: -15px;
 }
 @keyframes bounce {
   0%, 50%, 100% { top: 0; }

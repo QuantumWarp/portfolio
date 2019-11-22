@@ -41,11 +41,12 @@ export default {
 }
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 .app-tiles {
   justify-content: center;
-}
-.app-tiles > * {
-  margin: 10px;
+
+  > * {
+    margin: 10px;
+  }
 }
 </style>

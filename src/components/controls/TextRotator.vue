@@ -37,6 +37,5 @@ export default {
 .text-rotator > span.active {
 	opacity: 1;
   height: 60px;
-  transition: opacity 1s ease-in;
 }
 </style>

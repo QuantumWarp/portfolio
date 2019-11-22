@@ -1,14 +1,25 @@
 <template>
   <div class="history-node" :class="coll ? 'collapsed' : ''">
-    <div class="date-info" @click="coll = !coll">{{ date }}</div>
+    <div class="date-info"
+      @mouseover="hovered = true"
+      @mouseout="hovered = false"
+      @click="coll = !coll"
+    >{{ date }}</div>
 
-    <div class="divider" @click="coll = !coll" :class="end">
-      <div class="item-dot"></div>
+    <div class="divider" :class="end"
+      @mouseover="hovered = true"
+      @mouseout="hovered = false"
+      @click="coll = !coll">
+      <div class="item-dot" :class="hovered ? 'hovered' : ''"></div>
     </div>
 
     <div class="right-info row">
       <div class="content column">
-        <div class="company-title" @click="coll = !coll">{{ company }}</div>
+        <div class="company-title"
+          @mouseover="hovered = true"
+          @mouseout="hovered = false"
+          @click="coll = !coll"
+        >{{ company }}</div>
 
         <div class="description">
           <slot name="description"></slot>
@@ -33,6 +44,7 @@ export default {
   },
   data: () => ({
     coll: false,
+    hovered: false
   }),
   mounted() {
     this.coll = this.collapsed;
@@ -40,15 +52,16 @@ export default {
 }
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 .history-node {
   display: flex;
   flex-direction: row;
   max-height: 250px;
   transition: all 0.5s ease-out;
-}
-.history-node.collapsed {
-  max-height: 45px;
+  
+  &.collapsed {
+    max-height: 45px;
+  }
 }
 .date-info {
   cursor: pointer;
@@ -64,39 +77,42 @@ export default {
   cursor: pointer;
   padding: 0px 10px;
   position: relative;
+
+  &::after {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    width: 6px;
+    background-image: linear-gradient(90deg, rgb(50, 50, 50) 0%, rgb(100,100,100) 50%, rgb(50, 50, 50) 100%);
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -3px;
+  }
+  &.top::after  {
+    border-radius: 4px 4px 0px 0px;
+    top: -10px;
+    height: calc(100% + 10px);
+  }
+  &.bottom::after  {
+    border-radius: 0px 0px 8px 8px;
+    height: calc(100% + 15px);
+  }
 }
-.divider::after {
-  z-index: -1;
-  content: '';
-  position: absolute;
-  width: 6px;
-  background-image: linear-gradient(90deg, rgba(50, 50, 50) 0%, rgba(100,100,100) 50%, rgba(50, 50, 50) 100%);
-  top: 0;
-  bottom: 0;
-  left: 50%;
-  margin-left: -3px;
-}
-.divider.top::after  {
-  border-radius: 4px 4px 0px 0px;
-  top: -10px;
-  height: calc(100% + 10px);
-}
-.divider.bottom::after  {
-  border-radius: 0px 0px 8px 8px;
-  height: calc(100% + 15px);
-}
-.divider .item-dot {
+.item-dot {
   cursor: pointer;
   border-radius: 50%;
   border: 2px white solid;
-  background-color: rgb(15, 15, 109);
+  background-color: var(--color-primary);
   width: 30px;
   height: 30px;
   box-shadow: 0px 1px 1px 1px rgba(0, 0, 0, 0.4);
   margin-top: 10px;
-}
-.divider .item-dot:hover {
-  background-color: orange;
+
+  &.hovered {
+    transition: background-color .1s linear;
+    background-color: var(--color-secondary);
+  }
 }
 .right-info {
   position: relative;
@@ -106,27 +122,22 @@ export default {
   padding-right: 50px;
 }
 .content::before {
-  transition: all 0.5s ease-in-out;
-  opacity: 1;
   content: '';
   position: absolute;
   height: 3px;
   border-radius: 30%;
   width: 100%;
-  background-image: linear-gradient(90deg, rgba(255, 255, 255) 0%, rgba(100, 100, 100) 50%, rgba(255, 255, 255) 100%);
+  background-image: linear-gradient(90deg, rgb(255, 255, 255) 0%, rgb(100, 100, 100) 50%, rgb(255, 255, 255) 100%);
   top: 2px;
 }
-.history-node.collapsed .right-info::before {
-  opacity: 0;
-}
-.description, .images {
-  transition: all 0.5s ease-in-out;
+.description, .images, .content::before {
+  transition: opacity 0.5s ease-in-out;
   opacity: 1;
 }
-.history-node.collapsed .description,
-.history-node.collapsed .images,
-.history-node.collapsed .content::before {
-  opacity: 0;
+.history-node.collapsed {
+  .description, .images, .content::before {
+    opacity: 0;
+  }
 }
 .company-title {
   cursor: pointer;
@@ -152,9 +163,7 @@ export default {
   }
   .images {
     flex: 1;
-    margin-top: 10px;
-    margin-left: 0px;
-    margin-right: 30px;
+    margin: 10px 30px 0px 0px;
   }
 }
 </style>

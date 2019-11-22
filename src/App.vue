@@ -19,7 +19,8 @@ export default {
 
 <style lang="scss">
 :root {
-  --color-primary: orange;
+  --color-primary: #070B5A;
+  --color-secondary: #E0871F;
 }
 html, body, #app {
   margin: 0;

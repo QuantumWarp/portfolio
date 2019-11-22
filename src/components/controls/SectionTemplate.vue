@@ -1,7 +1,7 @@
 <template>
   <div class="section-template" :class="shaded ? 'shaded' : ''">
     <div class="container">
-      <div class="header">
+      <div class="header column">
         <span class="title">
           <slot name="title"></slot>
         </span>
@@ -26,14 +26,15 @@ export default {
 }
 </script>
 
-<style scoped>
-.shaded {
-  background-color: rgb(240, 240, 240);
-}
+<style lang="scss" scoped>
 .section-template {
   padding: 60px 5%;
   display: flex;
   justify-content: center;
+
+  &.shaded {
+    background-color: rgb(240, 240, 240);
+  }
 }
 .container {
   max-width: 1500px;
@@ -42,24 +43,17 @@ export default {
   flex-direction: column;
 }
 .header {
-  border-left: 6px orange solid;
+  border-left: 6px var(--color-secondary) solid;
   padding-left: 20px;
-  display: flex;
-  flex-direction: column;
   margin-bottom: 40px;
-}
-.title {
-  font-size: 40px;
-}
-.description {
-  font-size: 18px;
-  display: flex;
-  flex-direction: row;
-}
-.underline {
-  background-color: orange;
-  height: 3px;
-  width: 400px;
-  margin-left: 50px;
+  
+  .title {
+    font-size: 48px;
+    font-weight: bold;
+  }
+
+  .description {
+    font-size: 18px;
+  }
 }
 </style>

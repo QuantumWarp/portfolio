@@ -43,8 +43,8 @@ export default {
   flex-direction: column;
 }
 .header {
-  border-left: 6px var(--color-secondary) solid;
-  padding-left: 20px;
+  position: relative;
+  margin-left: 200px;
   margin-bottom: 40px;
   
   .title {
@@ -55,5 +55,17 @@ export default {
   .description {
     font-size: 18px;
   }
+}
+.header::before {
+  content: '';
+  position: absolute;
+  height: 100%;
+  border-left: 6px var(--color-secondary) solid;
+  border-style: solid;
+  border-width: 0 0 25px 25px;
+  width: 50%;
+  background-color: var(--color-secondary);
+  right: 100%;
+  
 }
 </style>

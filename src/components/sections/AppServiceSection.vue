@@ -7,23 +7,15 @@
       <AppServiceCard class="column"
         name="Fractal Viewer"
         appUrl="https://fractal.quantumwss.com"
-        :imgSrc="require('@/assets/fractal-viewer-tile.png')">
-        <template slot="description">
-          View fractals and zoom into fractals in this pure front-end Angular application.
-          Save interesting areas you see to create cool backgrounds.
-          Not optimized for mobile.
-        </template>
+        :imgSrc="require('@/assets/app-tiles/fractal-viewer-tile.png')">
+        View, zoom and export images of fractals in this client-side application.
       </AppServiceCard>
       
       <AppServiceCard class="column"
         name="MTG Card Organizer"
         appUrl="https://mtg.quantumwss.com"
-        :imgSrc="require('@/assets/mtg-card-organizer-tile.png')">
-        <template slot="description">
-          Organize and sort Magic the Gathering cards into various collections, make decks and track life totals during games.
-          Built with a .NET server with an Angular front-end.
-          This is a work in progress and not optimized for mobile.
-        </template>
+        :imgSrc="require('@/assets/app-tiles/mtg-card-organizer-tile.png')">
+        Organize and sort Magic the Gathering&trade; cards into various collections, construct decks and track life totals during games.
       </AppServiceCard>
     </div>
   </SectionTemplate>
@@ -38,7 +30,7 @@ export default {
     SectionTemplate,
     AppServiceCard,
   },
-}
+};
 </script>
 
 <style lang="scss" scoped>

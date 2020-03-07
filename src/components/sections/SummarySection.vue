@@ -1,7 +1,7 @@
 <template>
   <SectionTemplate>
     <template slot="title">About Me</template>
-    <template slot="description">About Me</template>
+    <template slot="description">A quick summary</template>
 
     <div class="content row">
       <img class="action-picture column" src="@/assets/action-picture.jpg"/>
@@ -19,7 +19,9 @@
         </div>
 
         <div class="download">
-          <PageButton>Download CV</PageButton>
+          <a href="John Lowther CV 20190303.doc" style="text-decoration: none">
+            <PageButton v-tooltip="'CV not up to date with current job information'">Download CV</PageButton>
+          </a>
         </div>
       </div>
     </div>

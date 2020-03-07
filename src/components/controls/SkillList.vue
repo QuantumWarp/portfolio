@@ -41,7 +41,7 @@ export default {
     flex-direction: column;
 
     > * {
-      margin-left: 40px;
+      margin-left: 20%;
       margin-bottom: 10px;
     }
   }

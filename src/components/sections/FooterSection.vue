@@ -2,7 +2,7 @@
   <div class="footer-section">
     <span class="powered-by">
       Powered by Vue.js
-      <img src="@/assets/tech-icons/vue.svg" >
+      <img src="@/assets/tech-icons/vuejs.svg" >
     </span>
     
     <span class="copyright">

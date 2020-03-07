@@ -16,6 +16,7 @@ export default {
 <style lang="scss" scoped>
 .page-button {
   font-size: 20px;
+  color: black;
   padding: 10px;
   border-radius: 4px;
   box-shadow: 2px 2px 3px -1px black;

@@ -7,13 +7,11 @@
       <div class="history-area">
         <HistoryNode end="top"
           date="April 2019"
-          company="Webeo"
-          :collapsed="true">
+          company="Webeo">
           <span slot="description">
             I have been working for Webeo for the past {{durationText(new Date(2019, 1, 1))}} as a Senior Software Developer.
-            For the most part I have been contributing to the product Webeo, a SaaS website personalisation tool.
-            I have had the opportunity to learn numerous up to date technologies, including microservices, Docker and data warehousing, whilst still making
-            my mark using my existing skill set.
+            I have had the opportunity to continue learning numerous up to date technologies, including microservices,
+            Docker and data warehousing.
           </span>
           <template slot="images">
             <img src="@/assets/company-logos/webeo.png" />
@@ -26,9 +24,8 @@
           company="Serenity Holidays"
           :collapsed="true">
           <span slot="description">
-            At this company I was in a project to rebuild a legacy system from the ground up.
-            Taking on a leadership role within the team, I made significant contributions towards the project using up to date technology including .NET Core
-            and Angular 2+.
+            This company was trying rebuild a legacy system from the ground up. Taking on a leadership role within the team,
+            I made significant contributions towards the project using up to date technology including .NET Core and Angular 2+.
           </span>
           <img slot="images" src="@/assets/company-logos/serenity-holidays.png" />
         </HistoryNode>
@@ -38,7 +35,7 @@
           company="Nxtera"
           :collapsed="true">
           <span slot="description">
-            During my time here I was working on a multi platform software solution that monitors and tests different aspects of telephone systems and voice recorders.
+            During my time here I was working on a multi platform software solution that monitored and tested different aspects of telephone systems and voice recorders.
             The primary language used throughout was C#.
             </span>
           <img slot="images" src="@/assets/company-logos/nxtera-at-verint.jpg" />
@@ -49,8 +46,7 @@
           company="Sony"
           :collapsed="true">
           <span slot="description">
-            During my time here I was primarily fixing bugs on various projects relating to Sony's Media Backbone Conductor using Java, webMethods and Linux.
-            One of the larger projects whilst there involved setting up an array of linux scripts that would fully deploy the application stack.
+            My role was primarily to fix bugs on various projects relating to Sony's Media Backbone Conductor using Java, webMethods and Linux.
           </span>
           <img slot="images" src="@/assets/company-logos/sony.png" />
         </HistoryNode>
@@ -60,8 +56,8 @@
           company="Barclays"
           :collapsed="true">
           <span slot="description">
-            My main role was to assist with both feature development and bug fixing and for the Windows Pingit mobile app which was hitting a 4.5/5 star rating on the app store.
-            I received a lot of exposure to the testing, design and support aspects of the various applications as part of a large organization.
+            Whilst here I assisted with feature development and bug fixing on the Windows Pingit mobile app which was hitting a 4.5/5 star rating on the app store.
+            I received a lot of initial exposure to the testing, design and support aspects of the various applications as part of a large organization.
           </span>
           <img slot="images" src="@/assets/company-logos/barclays.png" />
         </HistoryNode>
@@ -72,8 +68,7 @@
           :collapsed="true">
           <span slot="description">
             My development career began at this IT consultancy company, where I was initially trained in Java, SQL and Unix.
-            I completed various training in the fundamental principles of working in the software development industry.
-            I was placed onto an accelerated training program and successfully completed all the modules at the required grades.
+            I completed training in the fundamental principles of working in the software development industry on an accelerated program.
           </span>
           <img slot="images" src="@/assets/company-logos/fdm.png" />
         </HistoryNode>

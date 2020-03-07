@@ -77,6 +77,7 @@ export default {
   cursor: pointer;
   padding: 0px 10px;
   position: relative;
+  z-index: 1;
 
   &::after {
     z-index: -1;

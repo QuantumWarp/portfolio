@@ -1,8 +1,10 @@
 <template>
   <div class="primary-section">
+    <img class="logo" src="@/assets/logo.svg">
+
     <div class="background">
       <div class="background-layer"></div>
-      <img class="background-image" src="https://images.pexels.com/photos/753325/pexels-photo-753325.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"/>
+      <div class="background-image"></div>
     </div>
     
     <div class="content">
@@ -17,7 +19,8 @@
         I am a 
         <TextRotator class="iama" :words="[
           'Software Developer',
-          'Web Designer'
+          'Web Designer',
+          'Solutions Architect',
         ]"></TextRotator>
       </span>
 
@@ -45,6 +48,14 @@ export default {
   width: 100%;
   color: whitesmoke;
 }
+.logo {
+  display: none;
+  position: absolute;
+  z-index: 1;
+  height: 30px;
+  top: 10px;
+  left: 10px;
+}
 
 .background {
   position: relative;
@@ -59,9 +70,11 @@ export default {
   background-color: rgb(0, 0, 64);
 }
 .background-image {
+  background: no-repeat center center fixed;
+  background-image: url('../../assets/background.jpg'), url('../../assets/background-low-res.jpg');
+  background-size: cover;
   height: 100%;
   width: 100%;
-  object-fit: cover
 }
 
 .content {
@@ -77,17 +90,18 @@ export default {
 }
 .profile-picture {
   width: 180px;
+  height: 180px;
   border-radius: 50%;
   border: 10px solid grey;
 }
 .name {
-  font-size: 60px;
+  font-size: 80px;
 }
 .last-name {
   color: var(--color-secondary);
 }
 .one-liner {
-  font-size: 24px;
+  font-size: 28px;
   margin-right: 170px;
 }
 .iama {
@@ -101,6 +115,12 @@ export default {
   bottom: 2vh;
 }
 @media only screen and (max-width: 992px) {
+  .logo {
+    display: inline;
+  }
+  .background-layer {
+    opacity: 0.5;
+  }
   .name {
     font-size: 10vw;
   }

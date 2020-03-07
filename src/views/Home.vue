@@ -1,5 +1,5 @@
 <template>
-  <div class="home">
+  <div id="main-home" class="home">
     <PrimarySection id="home"></PrimarySection>
     <SummarySection id="about-me"></SummarySection>
     <SkillsSection id="skills-and-technology"></SkillsSection>

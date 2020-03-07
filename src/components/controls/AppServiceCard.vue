@@ -5,7 +5,7 @@
     <span class="name">{{ name }}</span>
 
     <span class="description">
-      <slot name="description"></slot>
+      <slot></slot>
     </span>
   </div>
 </template>
@@ -51,11 +51,12 @@ export default {
   height: 200px;
 }
 .app-service-card > .name {
+  text-align: center;
   font-size: 25px;
-  padding: 10px 10px 5px 10px;
+  padding: 15px;
 }
 .app-service-card > .description {
   font-size: 15px;
-  padding: 5px 10px 10px 10px;
+  padding: 0px 30px 20px 30px;
 }
 </style>

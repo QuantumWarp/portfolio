@@ -71,4 +71,19 @@ export default {
     }
   }
 }
+@media only screen and (max-width: 992px) {
+  .header {
+    .marker {
+      min-height: 52px;
+      min-width: 52px;
+    }
+    .text {
+      margin-left: 20px;
+      
+      .title {
+        font-size: 40px;
+      }
+    }
+  }
+}
 </style>

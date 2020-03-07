@@ -1,17 +1,17 @@
 <template>
   <SectionTemplate>
     <template slot="title">Skills and Technology</template>
-    <template slot="description">Just some of the tech I have used</template>
+    <template slot="description">Some of the tech I have used</template>
     
     <div class="content">
       <transition name="fade">
         <div class="main-tech" v-show="!seeMore">
-          <img src="@/assets/tech-icons/nodejs.svg" >
-          <img src="@/assets/tech-icons/csharp.svg" >
-          <img src="@/assets/tech-icons/vue.svg" >
-          <img src="@/assets/tech-icons/react.svg" >
-          <img src="@/assets/tech-icons/docker.svg" >
-          <img src="@/assets/tech-icons/html5.svg" >
+          <img src="@/assets/tech-icons/nodejs.svg" v-tooltip="'Node.js & Javascript'" >
+          <img src="@/assets/tech-icons/csharp.svg" v-tooltip="'.NET / C#'" >
+          <img src="@/assets/tech-icons/vuejs.svg" v-tooltip="'Vue.js'" >
+          <img src="@/assets/tech-icons/react.svg" v-tooltip="'React'" >
+          <img src="@/assets/tech-icons/docker.svg" v-tooltip="'Docker'" >
+          <img src="@/assets/tech-icons/html5.svg" v-tooltip="'HTML & CSS'" >
         </div>
       </transition>
 
@@ -23,6 +23,7 @@
               skills.nodejs,
               skills.dotnet,
               skills.typescript,
+              skills.javascript,
               skills.python,
               skills.java,
             ]"
@@ -34,32 +35,40 @@
               skills.vue,
               skills.react,
               skills.angular,
+              skills.redux,
+              skills.electron,
             ]"
           />
 
           <SkillList
-            heading="Databases"
+            heading="Data"
             :skills="[
-              skills.sql,
+              skills.mysql,
               skills.mongodb,
+              skills.sqlserver,
+              skills.redis,
             ]"
           />
 
           <SkillList
             heading="Tools"
             :skills="[
-              skills.html5,
               skills.git,
               skills.linux,
               skills.docker,
-              skills.redis,
+              skills.aws,
             ]"
           />
 
           <SkillList
-            heading="Patterns"
+            heading="Other"
             :skills="[
-              skills.redux,
+              skills.html5,
+              skills.css,
+              skills.microservices,
+              skills.auth,
+              skills.testing,
+              skills.agile,
             ]"
           />
         </div>
@@ -68,7 +77,7 @@
 
     <div class="see-more">
       <PageButton @click="seeMore = !seeMore">
-        See More
+        See {{ seeMore ? 'Less' : 'More' }}
       </PageButton>
     </div>
   </SectionTemplate>
@@ -89,13 +98,17 @@ export default {
     seeMore: false,
     skills: {
       dotnet: {
-        name: '.NET',
-        icon: require('@/assets/tech-icons/csharp.svg'),
-        info: '.NET Core, .NET Framework, MVC, WebAPI, Razor',
+        name: '.NET / C#',
+        icon: require('@/assets/tech-icons/dotnet.svg'),
+        info: '.NET Core, MVC, Razor and more',
       },
       nodejs: {
         name: 'Node.js',
         icon: require('@/assets/tech-icons/nodejs.svg'),
+      },
+      javascript: {
+        name: 'Javascript',
+        icon: require('@/assets/tech-icons/javascript.svg'),
       },
       typescript: {
         name: 'Typescript',
@@ -111,7 +124,7 @@ export default {
       },
       vue: {
         name: 'Vue.js',
-        icon: require('@/assets/tech-icons/vue.svg'),
+        icon: require('@/assets/tech-icons/vuejs.svg'),
       },
       react: {
         name: 'React',
@@ -122,20 +135,18 @@ export default {
         icon: require('@/assets/tech-icons/angular.svg'),
         info: 'Angular 2+',
       },
-      sql: {
-        name: 'SQL',
-        icon: require('@/assets/tech-icons/sql.svg'),
-        info: 'MySQL, SQLLite, SQLServer',
+      mysql: {
+        name: 'MySQL',
+        icon: require('@/assets/tech-icons/mysql.svg'),
       },
       mongodb: {
         name: 'Mongo DB',
         icon: require('@/assets/tech-icons/mongodb.svg'),
-        info: 'NoSQL Database',
+        info: 'NoSQL Databases',
       },
       html5: {
-        name: 'HTML 5',
+        name: 'HTML',
         icon: require('@/assets/tech-icons/html5.svg'),
-        info: 'HTML, css, javascript, flexbox, bootstrap',
       },
       git: {
         name: 'Git',
@@ -144,10 +155,12 @@ export default {
       linux: {
         name: 'Linux',
         icon: require('@/assets/tech-icons/linux.svg'),
+        info: 'SSH, Bash and various distros',
       },
       docker: {
         name: 'Docker',
         icon: require('@/assets/tech-icons/docker.svg'),
+        info: 'Used in AWS and other deployment pipelines',
       },
       redis: {
         name: 'Redis',
@@ -156,8 +169,72 @@ export default {
       redux: {
         name: 'Redux',
         icon: require('@/assets/tech-icons/redux.svg'),
-        info: 'Including vuex',
       },
+      microservices: {
+        name: 'Microservices',
+      },
+      auth: {
+        name: 'Authorisation',
+        info: 'Experience with OAuth in various languages',
+      },
+      aws: {
+        name: 'AWS',
+        icon: require('@/assets/tech-icons/aws.svg'),
+      },
+      css: {
+        name: 'CSS',
+        icon: require('@/assets/tech-icons/css3.svg'),
+        info: 'Including flexbox and bootstrap'
+      },
+      electron: {
+        name: 'Electron',
+        icon: require('@/assets/tech-icons/electron.svg'),
+      },
+      sqlserver: {
+        name: 'SQLServer',
+      },
+      testing: {
+        name: 'Testing',
+        info: 'Unit, Integration and Automation Testing',
+      },
+      agile: {
+        name: 'Scrum / Agile',
+      },
+
+      // Unused
+      npm: {},
+      mocha: {},
+      nginx: {},
+      slack: {},
+      microsoftTeams: {},
+      sqllite: {},
+      ubuntu: {},
+      solid: {},
+      machineLearning: {},
+      mvc: {},
+      razor: {},
+      iis: {},
+      yeoman: {},
+      gulp: {},
+      drawio: {},
+      jira: {},
+      vscode: {},
+      buddy: {},
+      jenkins: {},
+      azure: {},
+      oracleSQL: {},
+      sqlServer: {},
+      mySQL: {},
+      svn: {},
+      unity: {},
+      hyperV: {},
+      virtualBox: {},
+      blender: {},
+      oauth: {},
+      bitbucket: {},
+      github: {},
+      sass: {},
+      kubernetes: {},
     },
   }),
 };
@@ -167,6 +244,7 @@ export default {
 .main-tech {
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
 }
 .content {
   margin: 30px 0;
@@ -178,8 +256,13 @@ export default {
 .skills {
   display: flex;
   flex-wrap: wrap;
+
+  > * {
+    margin: 0 15px; 
+  }
 }
 .see-more {
+  margin-top: 30px;
   display: flex;
   justify-content: center;
 }
@@ -189,5 +272,18 @@ export default {
 .fade-enter, .fade-leave-to {
   opacity: 0;
   max-height: 0;
+}
+@media only screen and (max-width: 992px) {
+  .content {
+    margin: 0 0;
+  }
+  .main-tech img {
+    height: 120px;
+    margin: 0 5px;
+  }
+  .skills > * {
+    margin-bottom: 20px;
+    min-width: 55vw;
+  }
 }
 </style>

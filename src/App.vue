@@ -38,6 +38,7 @@ html, body, #app {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  box-sizing: border-box;
   width: 100%;
 }
 .column {

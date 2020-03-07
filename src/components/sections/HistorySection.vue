@@ -7,16 +7,16 @@
       <div class="history-area">
         <HistoryNode end="top"
           date="April 2019"
-          company="Lead Forensics">
+          company="Webeo">
           <span slot="description">
-            I have been working at Lead Forensics for the past {{durationText(new Date(2019, 1, 1))}} as a Senior Software Developer.
+            I have been working for Webeo for the past {{durationText(new Date(2019, 1, 1))}} as a Senior Software Developer.
             For the most part I have been contributing to the product Webeo, a SaaS website personalisation tool.
             I have had the opportunity to learn numerous up to date technologies, including microservices, Docker and data warehousing, whilst still making
             my mark using my existing skill set.
           </span>
           <template slot="images">
-            <img src="@/assets/company-logos/lead-forensics.png" />
             <img src="@/assets/company-logos/webeo.png" />
+            <img src="@/assets/company-logos/lead-forensics.png" />
           </template>     
         </HistoryNode>
         

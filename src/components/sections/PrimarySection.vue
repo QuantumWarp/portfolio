@@ -2,7 +2,7 @@
   <div class="primary-section">
     <div class="background">
       <div class="background-layer"></div>
-      <img class="background-image" src="https://wallpaperask.com/wp-content/uploads/1920x1080-HD-Backgrounds.png"/>
+      <img class="background-image" src="https://images.pexels.com/photos/753325/pexels-photo-753325.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"/>
     </div>
     
     <div class="content">
@@ -78,7 +78,7 @@ export default {
 .profile-picture {
   width: 180px;
   border-radius: 50%;
-  border: 8px solid grey;
+  border: 10px solid grey;
 }
 .name {
   font-size: 60px;

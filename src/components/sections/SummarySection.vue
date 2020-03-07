@@ -8,15 +8,17 @@
 
       <div class="right-content column">
         <span class="summary-text">
-          Hi, I'm John, currently a full time Software Developer working at Lead Forensics.
-          I am both capable and dedicated and will constantly strive to achieve excellence on what ever task or project I am currently working on.
+          Hi, I'm John, currently a full time Software Developer working for Webeo on the development of website personalisation tools.
+          I am capable, dedicated and constantly strive for excellence both personally and on any task or project I am working on.
         </span>
 
         <div class="main-points">
-          <span>6 years expierence in the industry</span>
+          <span>6 years experience in the industry</span>
           <span>Proficient in multiple languages and technologies</span>
-          <span>Designing and implementing full solutions</span>
+          <span>Designing and implementing full, maintainable solutions</span>
         </div>
+
+        <SkillsControl />
 
         <div class="download">
           <PageButton>Download CV</PageButton>
@@ -29,11 +31,13 @@
 <script>
 import SectionTemplate from '../controls/SectionTemplate.vue';
 import PageButton from '../controls/PageButton.vue';
+import SkillsControl from '../controls/SkillsControl.vue';
 
 export default {
   components: {
     SectionTemplate,
     PageButton,
+    SkillsControl,
   },
 }
 </script>

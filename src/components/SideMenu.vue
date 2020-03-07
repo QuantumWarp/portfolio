@@ -1,7 +1,7 @@
 <template>
   <div class="side-menu">
     <div class="top">
-      <v-icon name="balance-scale" scale="10"/>
+      <img src="../assets/logo.svg"> 
     </div>
 
     <div class="list">
@@ -43,6 +43,9 @@ export default {
   justify-content: center;
   align-items: center;
   border-bottom: 1px solid grey;
+}
+.side-menu .top img {
+  height: 120px;
 }
 .side-menu .list {
   margin-top: 6vh;

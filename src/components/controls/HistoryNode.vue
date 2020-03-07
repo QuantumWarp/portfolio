@@ -14,7 +14,7 @@
     </div>
 
     <div class="right-info row">
-      <div class="content column">
+      <div class="content column" :class="end">
         <div class="company-title"
           @mouseover="hovered = true"
           @mouseout="hovered = false"
@@ -56,7 +56,7 @@ export default {
 .history-node {
   display: flex;
   flex-direction: row;
-  max-height: 250px;
+  max-height: 260px;
   transition: all 0.5s ease-out;
   
   &.collapsed {
@@ -119,9 +119,9 @@ export default {
   overflow: hidden;
   flex: 1;
   padding: 12px 0px 15px 0px;
-  padding-right: 50px;
+  padding-right: 15%;
 }
-.content::before {
+.content:not(.top)::before {
   content: '';
   position: absolute;
   height: 3px;
@@ -149,7 +149,9 @@ export default {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-left: 40px;
+}
+.description {
+  padding: 20px 10%;
 }
 @media only screen and (max-width: 992px) {
   .history-node {
@@ -164,6 +166,10 @@ export default {
   .images {
     flex: 1;
     margin: 10px 30px 0px 0px;
+  }
+  .description {
+    width: 100%;
+    padding: 20px 10px;
   }
 }
 </style>

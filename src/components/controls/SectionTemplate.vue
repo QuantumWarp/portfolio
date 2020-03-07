@@ -1,14 +1,18 @@
 <template>
   <div class="section-template" :class="shaded ? 'shaded' : ''">
     <div class="container">
-      <div class="header column">
-        <span class="title">
-          <slot name="title"></slot>
-        </span>
+      <div class="header">
+        <div class="marker" />
+  
+        <div class="text column">
+          <span class="title">
+            <slot name="title"></slot>
+          </span>
 
-        <span class="description">
-          <slot name="description"></slot>
-        </span> 
+          <span class="description">
+            <slot name="description"></slot>
+          </span> 
+        </div>
       </div>
 
       <div class="content">
@@ -28,12 +32,15 @@ export default {
 
 <style lang="scss" scoped>
 .section-template {
-  padding: 60px 5%;
   display: flex;
   justify-content: center;
 
   &.shaded {
     background-color: rgb(240, 240, 240);
+  }
+
+  .content {
+    padding: 10px 5% 60px 5%;
   }
 }
 .container {
@@ -43,29 +50,28 @@ export default {
   flex-direction: column;
 }
 .header {
-  position: relative;
-  margin-left: 200px;
-  margin-bottom: 40px;
-  
-  .title {
-    font-size: 48px;
-    font-weight: bold;
+  display: flex;
+  align-items: center;
+  padding: 60px 4% 20px 4%;
+
+  .marker {
+    min-height: 62px;
+    min-width: 62px;
+    background-color: var(--color-secondary);
+    box-shadow: 8px 8px black;
   }
 
-  .description {
-    font-size: 18px;
+  .text {
+    margin-left: 50px;
+    
+    .title {
+      font-size: 48px;
+      font-weight: bold;
+    }
+
+    .description {
+      font-size: 18px;
+    }
   }
-}
-.header::before {
-  content: '';
-  position: absolute;
-  height: 100%;
-  border-left: 6px var(--color-secondary) solid;
-  border-style: solid;
-  border-width: 0 0 25px 25px;
-  width: 50%;
-  background-color: var(--color-secondary);
-  right: 100%;
-  
 }
 </style>

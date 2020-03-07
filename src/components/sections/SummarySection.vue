@@ -18,8 +18,6 @@
           <span>Designing and implementing full, maintainable solutions</span>
         </div>
 
-        <SkillsControl />
-
         <div class="download">
           <PageButton>Download CV</PageButton>
         </div>
@@ -31,13 +29,11 @@
 <script>
 import SectionTemplate from '../controls/SectionTemplate.vue';
 import PageButton from '../controls/PageButton.vue';
-import SkillsControl from '../controls/SkillsControl.vue';
 
 export default {
   components: {
     SectionTemplate,
     PageButton,
-    SkillsControl,
   },
 }
 </script>
@@ -48,6 +44,7 @@ export default {
   max-width: 50%;
   height: 450px;
   max-height: 80vw;
+  border-radius: 20px 80px;
 }
 .content {
   display: flex;
@@ -89,6 +86,7 @@ export default {
 @media screen and (max-width: 992px) {
   .action-picture {
     max-width: 100%;
+    border-radius: 10px;
   }
   .right-content {
     padding: 20px 10px;

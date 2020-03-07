@@ -34,13 +34,10 @@ export default {
 .section-template {
   display: flex;
   justify-content: center;
-
-  &.shaded {
-    background-color: rgb(240, 240, 240);
-  }
+  padding: 60px 0 80px 0;
 
   .content {
-    padding: 10px 5% 60px 5%;
+    padding: 10px 5% 0 5%;
   }
 }
 .container {
@@ -52,7 +49,7 @@ export default {
 .header {
   display: flex;
   align-items: center;
-  padding: 60px 4% 20px 4%;
+  padding: 0 4% 20px 4%;
 
   .marker {
     min-height: 62px;

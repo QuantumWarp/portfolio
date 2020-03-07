@@ -1,7 +1,7 @@
 <template>
   <div class="skill-pill" :title="info">
-    <slot></slot>
     <img v-if="icon" :src="icon" >
+    <slot></slot>
   </div>
 </template>
 
@@ -19,14 +19,9 @@ export default {
   display: flex;
   flex-direction: row;
   align-items: center;
-  border: 1px solid grey;
-  padding: 0 8px;
-  border-radius: 40px;
-  margin: 2px;
-  user-select: none;
 }
 img {
-  margin-left: 2px;
+  margin-right: 10px;
   height: 25px;
 }
 </style>

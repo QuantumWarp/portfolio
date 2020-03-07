@@ -7,7 +7,8 @@
       <div class="history-area">
         <HistoryNode end="top"
           date="April 2019"
-          company="Webeo">
+          company="Webeo"
+          :collapsed="true">
           <span slot="description">
             I have been working for Webeo for the past {{durationText(new Date(2019, 1, 1))}} as a Senior Software Developer.
             For the most part I have been contributing to the product Webeo, a SaaS website personalisation tool.

@@ -19,7 +19,6 @@ export default {
     imgSrc: { type: String, required: true },
     appUrl: { type: String, required: true },
     name: { type: String, required: true },
-    description: { type: String, required: true },
   },
   methods: {
     navigateToApp() {

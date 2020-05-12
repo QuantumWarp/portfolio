@@ -22,7 +22,7 @@
 export default {
   props: {
     icon: { type: String, default: null },
-    info: { type: String, required: true },
+    info: { type: String, default: null },
   },
 };
 </script>

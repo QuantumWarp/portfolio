@@ -49,7 +49,7 @@ html, body, #app, .main-content {
   transition: opacity .3s;
   background-color: white;
 }
-#app, .tooltip {
+#app, .tooltip, button {
   font-family: 'Montserrat';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;

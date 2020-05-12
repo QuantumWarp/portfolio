@@ -1,5 +1,5 @@
 <template>
-  <div class="section-template" :class="shaded ? 'shaded' : ''">
+  <section class="section-template" :class="shaded ? 'shaded' : ''">
     <div class="container">
       <div class="header">
         <div class="marker" />
@@ -19,7 +19,7 @@
         <slot></slot>
       </div>
     </div>
-  </div>
+  </section>
 </template>
 
 <script>

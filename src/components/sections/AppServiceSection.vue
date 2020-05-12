@@ -17,6 +17,13 @@
         :imgSrc="require('@/assets/app-tiles/mtg-card-organizer-tile.png')">
         Organize and sort Magic the Gathering&trade; cards into various collections, construct decks and track life totals during games.
       </AppServiceCard>
+      
+      <AppServiceCard class="column"
+        name="Stitch Patterns"
+        appUrl="https://stitch.quantumwss.com"
+        :imgSrc="require('@/assets/app-tiles/BeeSolo.png')">
+        Create and save new knitting patterns. Track knitting progress with the row counter and timer.
+      </AppServiceCard>
     </div>
   </SectionTemplate>
 </template>
@@ -38,7 +45,7 @@ export default {
   justify-content: center;
 
   > * {
-    margin: 10px;
+    margin: 15px;
   }
 }
 </style>

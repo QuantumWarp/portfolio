@@ -1,14 +1,14 @@
 <template>
-  <div class="footer-section">
+  <footer class="footer-section">
     <span class="powered-by">
       Powered by Vue.js
-      <img src="@/assets/tech-icons/vuejs.svg" >
+      <img src="@/assets/tech-icons/vuejs.svg">
     </span>
-    
+
     <span class="copyright">
       &copy; {{ new Date().getFullYear() }} - John Lowther
     </span>
-  </div>
+  </footer>
 </template>
 
 <style lang="scss" scoped>
@@ -27,7 +27,7 @@
   flex-direction: row;
   align-items: center;
   margin-bottom: 20px;
-  
+
   > img {
     margin-left: 5px;
     height: 25px;

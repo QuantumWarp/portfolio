@@ -1,22 +1,29 @@
 <template>
-  <section class="section-template" :class="shaded ? 'shaded' : ''">
+  <section
+    class="section-template"
+    :class="{ shaded }"
+  >
     <div class="container">
       <div class="header">
         <div class="marker" />
-  
+
         <div class="text column">
           <span class="title">
-            <slot name="title"></slot>
+            <slot name="title">
+              {{ title }}
+            </slot>
           </span>
 
           <span class="description">
-            <slot name="description"></slot>
-          </span> 
+            <slot name="description">
+              {{ description }}
+            </slot>
+          </span>
         </div>
       </div>
 
       <div class="content">
-        <slot></slot>
+        <slot />
       </div>
     </div>
   </section>
@@ -25,9 +32,11 @@
 <script>
 export default {
   props: {
+    title: { type: String, default: '' },
+    description: { type: String, default: '' },
     shaded: Boolean,
   },
-}
+};
 </script>
 
 <style lang="scss" scoped>
@@ -60,7 +69,7 @@ export default {
 
   .text {
     margin-left: 50px;
-    
+
     .title {
       font-size: 48px;
       font-weight: bold;
@@ -79,7 +88,7 @@ export default {
     }
     .text {
       margin-left: 20px;
-      
+
       .title {
         font-size: 40px;
       }

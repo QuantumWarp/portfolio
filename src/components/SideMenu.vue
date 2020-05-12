@@ -13,15 +13,27 @@
     </div>
 
     <div class="list">
-      <SideMenuItem page-link="home">Home</SideMenuItem>
-      <SideMenuItem page-link="about-me">About</SideMenuItem>
-      <SideMenuItem page-link="skills-and-technology">Skills</SideMenuItem>
-      <SideMenuItem page-link="apps-and-services">Apps</SideMenuItem>
-      <SideMenuItem page-link="history">History</SideMenuItem>
-      <SideMenuItem page-link="contact-me">Contact</SideMenuItem>
+      <SideMenuItem page-link="home">
+        Home
+      </SideMenuItem>
+      <SideMenuItem page-link="about-me">
+        About
+      </SideMenuItem>
+      <SideMenuItem page-link="skills-and-technology">
+        Skills
+      </SideMenuItem>
+      <SideMenuItem page-link="apps-and-services">
+        Apps
+      </SideMenuItem>
+      <SideMenuItem page-link="history">
+        History
+      </SideMenuItem>
+      <SideMenuItem page-link="contact-me">
+        Contact
+      </SideMenuItem>
     </div>
 
-    <div class="social-links"></div>
+    <div class="social-links" />
   </div>
 </template>
 
@@ -30,7 +42,7 @@ import SideMenuItem from './controls/SideMenuItem.vue';
 
 export default {
   components: {
-    SideMenuItem
+    SideMenuItem,
   },
   data: () => ({
     showName: false,

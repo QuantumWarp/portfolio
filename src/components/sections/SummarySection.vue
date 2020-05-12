@@ -1,15 +1,20 @@
 <template>
-  <SectionTemplate>
-    <template slot="title">About Me</template>
-    <template slot="description">A quick summary</template>
-
+  <SectionTemplate
+    title="About Me"
+    description="A quick summary"
+  >
     <div class="content row">
-      <img class="action-picture column" src="@/assets/action-picture.jpg"/>
+      <img
+        class="action-picture column"
+        src="@/assets/action-picture.jpg"
+      >
 
       <div class="right-content column">
         <span class="summary-text">
-          Hi, I'm John, currently a full time Software Developer working for Webeo on the development of website personalisation tools.
-          I am capable, dedicated and constantly strive for excellence both personally and on any task or project I am working on.
+          Hi, I'm John, currently a full time Software Developer working for Webeo
+          on the development of website personalisation tools. I am capable, dedicated and
+          constantly strive for excellence both personally and on any task or project I
+          am working on.
         </span>
 
         <div class="main-points">
@@ -19,8 +24,13 @@
         </div>
 
         <div class="download">
-          <a href="John Lowther CV 20190303.doc" style="text-decoration: none">
-            <PageButton v-tooltip="'CV not up to date with current job information'">Download CV</PageButton>
+          <a
+            href="John Lowther CV 20190303.doc"
+            style="text-decoration: none"
+          >
+            <PageButton v-tooltip="'CV not up to date with current job information'">
+              Download CV
+            </PageButton>
           </a>
         </div>
       </div>
@@ -37,7 +47,7 @@ export default {
     SectionTemplate,
     PageButton,
   },
-}
+};
 </script>
 
 <style lang="scss" scoped>
@@ -69,7 +79,7 @@ export default {
   > span {
     position: relative;
   }
-  
+
   > span::before{
     content: '';
     position: absolute;
@@ -78,7 +88,7 @@ export default {
     top: 10px;
     left: -10px;
     height: 5px;
-    width: 5px;  
+    width: 5px;
   }
 }
 .download {

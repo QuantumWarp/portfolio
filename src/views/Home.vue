@@ -1,12 +1,15 @@
 <template>
-  <div id="main-home" class="home">
-    <PrimarySection id="home"></PrimarySection>
-    <SummarySection id="about-me"></SummarySection>
-    <SkillsSection id="skills-and-technology"></SkillsSection>
-    <AppServiceSection id="apps-and-services"></AppServiceSection>
-    <HistorySection id="history"></HistorySection>
-    <ContactSection id="contact-me"></ContactSection>
-    <FooterSection></FooterSection>
+  <div
+    id="main-home"
+    class="home"
+  >
+    <PrimarySection id="home" />
+    <SummarySection id="about-me" />
+    <SkillsSection id="skills-and-technology" />
+    <AppServiceSection id="apps-and-services" />
+    <HistorySection id="history" />
+    <ContactSection id="contact-me" />
+    <FooterSection />
   </div>
 </template>
 
@@ -29,7 +32,7 @@ export default {
     SkillsSection,
     SummarySection,
   },
-}
+};
 </script>
 
 <style scoped>

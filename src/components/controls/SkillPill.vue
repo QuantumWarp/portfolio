@@ -1,16 +1,28 @@
 <template>
-  <div class="skill-pill" :title="info" v-tooltip="info">
-    <img v-if="icon" :src="icon" >
-    <div class="default" v-if="!icon"></div>
-    <slot></slot>
+  <div
+    v-tooltip="info"
+    class="skill-pill"
+    :title="info"
+  >
+    <img
+      v-if="icon"
+      :src="icon"
+    >
+
+    <div
+      v-if="!icon"
+      class="default"
+    />
+
+    <slot />
   </div>
 </template>
 
 <script>
 export default {
   props: {
-    icon: String,
-    info: String,
+    icon: { type: String, default: null },
+    info: { type: String, required: true },
   },
 };
 </script>

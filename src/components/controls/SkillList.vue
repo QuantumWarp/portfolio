@@ -1,13 +1,18 @@
 <template>
   <div class="skill-list">
-    <div class="heading">{{ heading }}</div>
+    <div class="heading">
+      {{ heading }}
+    </div>
+
     <div class="list">
       <SkillPill
         v-for="skill in skills"
         :key="skill.name"
         :icon="skill.icon"
         :info="skill.info"
-      >{{ skill.name }}</SkillPill>
+      >
+        {{ skill.name }}
+      </SkillPill>
     </div>
   </div>
 </template>
@@ -20,8 +25,8 @@ export default {
     SkillPill,
   },
   props: {
-    heading: String,
-    skills: Array,
+    heading: { type: String, required: true },
+    skills: { type: Array, required: true },
   },
 };
 </script>

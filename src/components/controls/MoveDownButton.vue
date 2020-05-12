@@ -1,8 +1,18 @@
 <template>
-  <div class="container" @click="moveDown">
+  <div
+    class="container"
+    @click="moveDown"
+  >
     <div class="button column">
-      <v-icon name="chevron-down" scale="1.7"/>
-      <v-icon name="chevron-down" scale="1.7"/>
+      <v-icon
+        name="chevron-down"
+        scale="1.7"
+      />
+
+      <v-icon
+        name="chevron-down"
+        scale="1.7"
+      />
     </div>
   </div>
 </template>
@@ -10,14 +20,14 @@
 <script>
 export default {
   props: {
-    pageLink: String,
+    pageLink: { type: String, required: true },
   },
   methods: {
     moveDown() {
-      location.href = `#${this.pageLink}`;
+      window.location.href = `#${this.pageLink}`;
     },
   },
-}
+};
 </script>
 
 <style lang="scss" scoped>

@@ -1,22 +1,46 @@
 <template>
-  <SectionTemplate>
-    <template slot="title">Skills and Technology</template>
-    <template slot="description">Some of the tech I have used</template>
-    
+  <SectionTemplate
+    title="Skills and Technology"
+    description="Some of the tech I have used"
+  >
     <div class="content">
       <transition name="fade">
-        <div class="main-tech" v-show="!seeMore">
-          <img src="@/assets/tech-icons/nodejs.svg" v-tooltip="'Node.js & Javascript'" >
-          <img src="@/assets/tech-icons/csharp.svg" v-tooltip="'.NET / C#'" >
-          <img src="@/assets/tech-icons/vuejs.svg" v-tooltip="'Vue.js'" >
-          <img src="@/assets/tech-icons/react.svg" v-tooltip="'React'" >
-          <img src="@/assets/tech-icons/docker.svg" v-tooltip="'Docker'" >
-          <img src="@/assets/tech-icons/html5.svg" v-tooltip="'HTML & CSS'" >
+        <div
+          v-show="!seeMore"
+          class="main-tech"
+        >
+          <img
+            v-tooltip="'Node.js & Javascript'"
+            src="@/assets/tech-icons/nodejs.svg"
+          >
+          <img
+            v-tooltip="'.NET / C#'"
+            src="@/assets/tech-icons/csharp.svg"
+          >
+          <img
+            v-tooltip="'Vue.js'"
+            src="@/assets/tech-icons/vuejs.svg"
+          >
+          <img
+            v-tooltip="'React'"
+            src="@/assets/tech-icons/react.svg"
+          >
+          <img
+            v-tooltip="'Docker'"
+            src="@/assets/tech-icons/docker.svg"
+          >
+          <img
+            v-tooltip="'HTML & CSS'"
+            src="@/assets/tech-icons/html5.svg"
+          >
         </div>
       </transition>
 
       <transition name="fade">
-        <div class="skills" v-show="seeMore">
+        <div
+          v-show="seeMore"
+          class="skills"
+        >
           <SkillList
             heading="Languages"
             :skills="[
@@ -84,6 +108,8 @@
 </template>
 
 <script>
+/* eslint-disable global-require */
+/* eslint-disable import/no-unresolved */
 import PageButton from '../controls/PageButton.vue';
 import SectionTemplate from '../controls/SectionTemplate.vue';
 import SkillList from '../controls/SkillList.vue';
@@ -184,7 +210,7 @@ export default {
       css: {
         name: 'CSS',
         icon: require('@/assets/tech-icons/css3.svg'),
-        info: 'Including flexbox and bootstrap'
+        info: 'Including flexbox and bootstrap',
       },
       electron: {
         name: 'Electron',
@@ -258,7 +284,7 @@ export default {
   flex-wrap: wrap;
 
   > * {
-    margin: 0 15px; 
+    margin: 0 15px;
   }
 }
 .see-more {

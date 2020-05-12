@@ -1,20 +1,23 @@
 <template>
-  <div class="side-menu-item" @click="goToPageLink">
-    <slot></slot>
+  <div
+    class="side-menu-item"
+    @click="goToPageLink"
+  >
+    <slot />
   </div>
 </template>
 
 <script>
 export default {
   props: {
-    pageLink: String,
+    pageLink: { type: String, required: true },
   },
   methods: {
     goToPageLink() {
-      location.href = `#${this.pageLink}`;
+      window.location.href = `#${this.pageLink}`;
     },
   },
-}
+};
 </script>
 
 <style lang="scss" scoped>

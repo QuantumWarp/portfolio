@@ -1,16 +1,28 @@
 <template>
-  <SectionTemplate>
-    <template slot="title">Contact Me</template>
-    <template slot="description">Don't hesitate to send me a message</template>
-
+  <SectionTemplate
+    title="Contact Me"
+    description="Don't hesitate to send me a message"
+  >
     <div class="container">
       <div class="content">
-        <input type="text" placeholder="Subject" v-model="subject" />
+        <input
+          v-model="subject"
+          type="text"
+          placeholder="Subject"
+        >
 
-        <textarea cols="40" rows="5" placeholder="Message" v-model="message"></textarea>
+        <textarea
+          v-model="message"
+          cols="40"
+          rows="5"
+          placeholder="Message"
+        />
 
         <div class="send">
-          <PageButton icon="envelope" @click="sendEmail">
+          <PageButton
+            icon="envelope"
+            @click="sendEmail"
+          >
             Send Message
           </PageButton>
         </div>
@@ -40,7 +52,7 @@ export default {
       window.location.href = `mailto:${email}?${subject}&${message}`;
     },
   },
-}
+};
 </script>
 
 <style scoped>

@@ -1,11 +1,14 @@
 <template>
-  <div class="app-service-card" @click="navigateToApp">
-    <img :src="imgSrc"/>
+  <div
+    class="app-service-card"
+    @click="navigateToApp"
+  >
+    <img :src="imgSrc">
 
     <span class="name">{{ name }}</span>
 
     <span class="description">
-      <slot></slot>
+      <slot />
     </span>
   </div>
 </template>
@@ -13,17 +16,17 @@
 <script>
 export default {
   props: {
-    imgSrc: String,
-    appUrl: String,
-    name: String,
-    description: String,
+    imgSrc: { type: String, required: true },
+    appUrl: { type: String, required: true },
+    name: { type: String, required: true },
+    description: { type: String, required: true },
   },
   methods: {
     navigateToApp() {
       window.location.href = this.appUrl;
-    }
+    },
   },
-}
+};
 </script>
 
 <style scoped>

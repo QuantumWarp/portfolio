@@ -1,32 +1,44 @@
 <template>
-  <div class="primary-section">
-    <img class="logo" src="@/assets/logo.svg">
+  <section class="primary-section">
+    <img
+      class="logo"
+      src="@/assets/logo.svg"
+    >
 
     <div class="background">
-      <div class="background-layer"></div>
-      <div class="background-image"></div>
+      <div class="background-layer" />
+      <div class="background-image" />
     </div>
-    
+
     <div class="content">
-      <img class="profile-picture" src="@/assets/profile-picture.jpg"/>
-      
+      <img
+        class="profile-picture"
+        src="@/assets/profile-picture.jpg"
+      >
+
       <span class="name">
         <span class="first-name">John </span>
         <span class="last-name">Lowther</span>
       </span>
 
       <span class="one-liner">
-        I am a 
-        <TextRotator class="iama" :words="[
-          'Software Developer',
-          'Web Designer',
-          'Solutions Architect',
-        ]"></TextRotator>
+        I am a
+        <TextRotator
+          class="iama"
+          :words="[
+            'Software Developer',
+            'Web Designer',
+            'Solutions Architect',
+          ]"
+        />
       </span>
 
-      <MoveDownButton class="move-down" page-link="about-me"></MoveDownButton>
+      <MoveDownButton
+        class="move-down"
+        page-link="about-me"
+      />
     </div>
-  </div>
+  </section>
 </template>
 
 <script>
@@ -38,7 +50,7 @@ export default {
     MoveDownButton,
     TextRotator,
   },
-}
+};
 </script>
 
 <style scoped>
@@ -106,7 +118,7 @@ export default {
 }
 .iama {
   margin-left: 6px;
-	color: var(--color-secondary);
+  color: var(--color-secondary);
   font-weight: 600;
 }
 .move-down {

@@ -1,33 +1,51 @@
 <template>
-  <div class="history-node" :class="coll ? 'collapsed' : ''">
-    <div class="date-info"
+  <div
+    class="history-node"
+    :class="{ collapsed: coll }"
+  >
+    <div
+      class="date-info"
       @mouseover="hovered = true"
       @mouseout="hovered = false"
       @click="coll = !coll"
-    >{{ date }}</div>
+    >
+      {{ date }}
+    </div>
 
-    <div class="divider" :class="end"
+    <div
+      class="divider"
+      :class="end"
       @mouseover="hovered = true"
       @mouseout="hovered = false"
-      @click="coll = !coll">
-      <div class="item-dot" :class="hovered ? 'hovered' : ''"></div>
+      @click="coll = !coll"
+    >
+      <div
+        class="item-dot"
+        :class="{ hovered }"
+      />
     </div>
 
     <div class="right-info row">
-      <div class="content column" :class="end">
-        <div class="company-title"
+      <div
+        class="content column"
+        :class="end"
+      >
+        <div
+          class="company-title"
           @mouseover="hovered = true"
           @mouseout="hovered = false"
           @click="coll = !coll"
-        >{{ company }}</div>
+        >
+          {{ company }}
+        </div>
 
         <div class="description">
-          <slot name="description"></slot>
+          <slot name="description" />
         </div>
       </div>
 
       <div class="images column">
-        <slot name="images"></slot>
+        <slot name="images" />
       </div>
     </div>
   </div>
@@ -36,20 +54,20 @@
 <script>
 export default {
   props: {
-    date: String,
-    company: String,
-    link: String,
-    collapsed: Boolean,
-    end: String, // 'top' or 'bottom'
+    date: { type: String, required: true },
+    company: { type: String, required: true },
+    link: { type: String, default: null },
+    collapsed: { type: Boolean },
+    end: { type: String, default: null }, // 'top' or 'bottom'
   },
   data: () => ({
     coll: false,
-    hovered: false
+    hovered: false,
   }),
   mounted() {
     this.coll = this.collapsed;
   },
-}
+};
 </script>
 
 <style lang="scss" scoped>
@@ -58,7 +76,7 @@ export default {
   flex-direction: row;
   max-height: 260px;
   transition: all 0.5s ease-out;
-  
+
   &.collapsed {
     max-height: 45px;
   }
@@ -84,7 +102,11 @@ export default {
     content: '';
     position: absolute;
     width: 6px;
-    background-image: linear-gradient(90deg, rgb(50, 50, 50) 0%, rgb(100,100,100) 50%, rgb(50, 50, 50) 100%);
+    background-image: linear-gradient(
+      90deg,
+      rgb(50, 50, 50) 0%,
+      rgb(100,100,100) 50%,
+      rgb(50, 50, 50) 100%);
     top: 0;
     bottom: 0;
     left: 50%;
@@ -128,7 +150,11 @@ export default {
   height: 3px;
   border-radius: 30%;
   width: 100%;
-  background-image: linear-gradient(90deg, rgb(255, 255, 255) 0%, rgb(100, 100, 100) 50%, rgb(255, 255, 255) 100%);
+  background-image: linear-gradient(
+    90deg,
+    rgb(255, 255, 255) 0%,
+    rgb(100, 100, 100) 50%,
+    rgb(255, 255, 255) 100%);
   top: 2px;
 }
 .description, .images, .content::before {

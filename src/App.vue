@@ -1,8 +1,11 @@
 <template>
   <div id="app">
-    <div class="main-content" :style="show ? {} : { opacity: 0 }">
-      <SideMenu></SideMenu>
-      <Home></Home>
+    <div
+      class="main-content"
+      :style="show ? {} : { opacity: 0 }"
+    >
+      <SideMenu />
+      <Home />
     </div>
   </div>
 </template>

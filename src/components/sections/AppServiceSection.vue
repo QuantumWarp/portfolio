@@ -27,10 +27,20 @@
         class="column"
         name="Stitch Patterns"
         app-url="https://stitch.quantumwss.com"
-        :img-src="require('@/assets/app-tiles/BeeSolo.png')"
+        :img-src="require('@/assets/app-tiles/stitch-patterns.png')"
       >
         Create and save new knitting patterns.
         Track knitting progress with the row counter and timer.
+      </AppServiceCard>
+
+      <AppServiceCard
+        class="column"
+        name="Simple File Tagger"
+        app-url="https://downloads.quantumwss.com/SimpleFileTagger.exe"
+        :img-src="require('@/assets/app-tiles/simple-file-tagger.png')"
+      >
+        A basic desktop application to tag files with dates and custom tags.
+        <b>Click to download</b>.
       </AppServiceCard>
     </div>
   </SectionTemplate>
@@ -54,6 +64,7 @@ export default {
 
   > * {
     margin: 15px;
+    min-width: 30%;
   }
 }
 </style>

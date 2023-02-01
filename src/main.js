@@ -2,7 +2,7 @@ import Vue from 'vue';
 import VTooltip from 'v-tooltip';
 
 // Icons
-import Icon from 'vue-awesome/components/Icon.vue';
+import Icon from 'vue-awesome';
 import 'vue-awesome/icons/envelope';
 import 'vue-awesome/icons/chevron-down';
 import 'vue-awesome/icons/balance-scale';

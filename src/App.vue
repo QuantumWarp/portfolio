@@ -158,4 +158,7 @@ html, body, #app, .main-content {
     transition: opacity .15s;
   }
 }
+.fa-icon {
+  fill: whitesmoke;
+}
 </style>

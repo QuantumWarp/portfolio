@@ -11,7 +11,7 @@
           company="Webeo"
         >
           <span slot="description">
-            I have been working for Webeo for the past {{ durationText(new Date(2019, 1, 1)) }}
+            I have been working for Webeo for the past 4
             as a Senior Software Developer. I have had the opportunity to continue learning numerous
             up to date technologies, including microservices, Docker and data warehousing.
           </span>
@@ -137,16 +137,6 @@ export default {
   components: {
     HistoryNode,
     SectionTemplate,
-  },
-  methods: {
-    durationText(dateStarted) {
-      const durationDifMs = Date.now() - dateStarted;
-      const durationDate = new Date(durationDifMs);
-      // Add months to round to nearest year
-      durationDate.setMonth(durationDate.getMonth() + 6);
-      const years = Math.abs(durationDate.getUTCFullYear() - 1970);
-      return years > 1 ? `${years} years` : 'year';
-    },
   },
 };
 </script>

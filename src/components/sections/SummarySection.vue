@@ -11,21 +11,23 @@
 
       <div class="right-content column">
         <span class="summary-text">
-          Hi, I'm John, currently a full time Software Developer working for Webeo
-          on the development of website personalisation tools. I am capable, dedicated and
-          constantly strive for excellence both personally and on any task or project I
-          am working on.
+          Hi, I'm John, I am a Full Stack software engineer with over 9 years of experience working
+          in the industry. My primary expertise is in React, Vue, .NET and Node.js, all of which I
+          have used extensively to create new products and solutions in both a professional and
+          personal capacity. I always have something I am working on, but don't hesitate to ask me
+          any questions.
         </span>
 
         <div class="main-points">
-          <span>6 years experience in the industry</span>
+          <span>{{ durationText(new Date(2013, 8, 1)) }} years experience in the industry</span>
+          <span>Many projects on my <a href="https://github.com/QuantumWarp">GitHub</a></span>
           <span>Proficient in multiple languages and technologies</span>
           <span>Designing and implementing full, maintainable solutions</span>
         </div>
 
         <div class="download">
           <a
-            href="John Lowther CV 20190303.doc"
+            href="John Lowther - 2301 - CV.docx"
             style="text-decoration: none"
           >
             <PageButton v-tooltip="'CV not up to date with current job information'">

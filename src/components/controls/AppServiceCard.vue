@@ -17,11 +17,12 @@
 export default {
   props: {
     imgSrc: { type: String, required: true },
-    appUrl: { type: String, required: true },
+    appUrl: { type: String, default: null },
     name: { type: String, required: true },
   },
   methods: {
     navigateToApp() {
+      if (!this.appUrl) return;
       window.location.href = this.appUrl;
     },
   },

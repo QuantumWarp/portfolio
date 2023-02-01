@@ -15,16 +15,6 @@
 
       <AppServiceCard
         class="column"
-        name="MTG Card Organizer"
-        app-url="https://mtg.quantumwss.com"
-        :img-src="require('@/assets/app-tiles/mtg-card-organizer-tile.png')"
-      >
-        Organize and sort Magic the Gathering&trade; cards into various collections,
-        construct decks and track life totals during games.
-      </AppServiceCard>
-
-      <AppServiceCard
-        class="column"
         name="Stitch Patterns"
         app-url="https://stitch.quantumwss.com"
         :img-src="require('@/assets/app-tiles/stitch-patterns.png')"
@@ -35,12 +25,20 @@
 
       <AppServiceCard
         class="column"
+        name="MTG Card Organizer"
+        app-url="https://mtg.quantumwss.com"
+        :img-src="require('@/assets/app-tiles/mtg-card-organizer-tile.png')"
+      >
+        Organize and sort Magic the Gathering&trade; cards into various collections,
+        construct decks and track life totals during games.
+      </AppServiceCard>
+
+      <AppServiceCard
+        class="column"
         name="Simple File Tagger"
-        app-url="https://downloads.quantumwss.com/SimpleFileTagger.exe"
         :img-src="require('@/assets/app-tiles/simple-file-tagger.png')"
       >
         A basic desktop application to tag files with dates and custom tags.
-        <b>Click to download</b>.
       </AppServiceCard>
     </div>
   </SectionTemplate>

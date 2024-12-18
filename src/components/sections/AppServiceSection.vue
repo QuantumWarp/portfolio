@@ -43,16 +43,9 @@
   </SectionTemplate>
 </template>
 
-<script>
+<script setup>
 import SectionTemplate from '../controls/SectionTemplate.vue';
 import AppServiceCard from '../controls/AppServiceCard.vue';
-
-export default {
-  components: {
-    SectionTemplate,
-    AppServiceCard,
-  },
-};
 </script>
 
 <style lang="scss" scoped>

@@ -31,27 +31,20 @@
   </SectionTemplate>
 </template>
 
-<script>
+<script setup>
 import SectionTemplate from '../controls/SectionTemplate.vue';
 import PageButton from '../controls/PageButton.vue';
 
-export default {
-  components: {
-    SectionTemplate,
-    PageButton,
-  },
-  data: () => ({
-    subject: '',
-    message: '',
-  }),
-  methods: {
-    sendEmail() {
-      const email = atob('ancubG93dGhlckBob3RtYWlsLmNvLnVr');
-      const subject = `subject=${encodeURIComponent(this.subject)}`;
-      const message = `body=${encodeURIComponent(this.message)}`;
-      window.location.href = `mailto:${email}?${subject}&${message}`;
-    },
-  },
+import { ref } from 'vue';
+
+const subject = ref('');
+const message = ref('');
+
+const sendEmail = () => {
+  const email = atob('ancubG93dGhlckBob3RtYWlsLmNvLnVr');
+  const encodedSubject = `subject=${encodeURIComponent(subject.value)}`;
+  const encodedMessage = `body=${encodeURIComponent(message.value)}`;
+  window.location.href = `mailto:${email}?${encodedSubject}&${encodedMessage}`;
 };
 </script>
 

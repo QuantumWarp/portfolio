@@ -40,16 +40,9 @@
   </SectionTemplate>
 </template>
 
-<script>
+<script setup>
 import SectionTemplate from '../controls/SectionTemplate.vue';
 import PageButton from '../controls/PageButton.vue';
-
-export default {
-  components: {
-    SectionTemplate,
-    PageButton,
-  },
-};
 </script>
 
 <style lang="scss" scoped>

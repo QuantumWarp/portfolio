@@ -14,12 +14,8 @@
   </button>
 </template>
 
-<script>
-export default {
-  props: {
-    icon: { type: String, default: null },
-  },
-};
+<script setup lang="ts">
+defineProps<{ icon?: string }>();
 </script>
 
 <style lang="scss" scoped>

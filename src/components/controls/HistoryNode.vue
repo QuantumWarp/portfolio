@@ -51,23 +51,19 @@
   </div>
 </template>
 
-<script>
-export default {
-  props: {
-    date: { type: String, required: true },
-    company: { type: String, required: true },
-    link: { type: String, default: null },
-    collapsed: { type: Boolean },
-    end: { type: String, default: null }, // 'top' or 'bottom'
-  },
-  data: () => ({
-    coll: false,
-    hovered: false,
-  }),
-  mounted() {
-    this.coll = this.collapsed;
-  },
-};
+<script setup lang="ts">
+import { ref } from 'vue';
+
+const { collapsed } = defineProps<{
+  date: string,
+  company: string,
+  link: string,
+  collapsed: boolean,
+  end: string
+}>();
+
+const coll = ref(collapsed);
+const hovered = ref(false);
 </script>
 
 <style lang="scss" scoped>

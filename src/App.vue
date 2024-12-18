@@ -11,7 +11,7 @@
 </template>
 
 <script setup>
-import Home from './views/Home.vue';
+import Home from './Home.vue';
 import SideMenu from './components/SideMenu.vue';
 import { onMounted, ref } from 'vue';
 

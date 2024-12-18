@@ -129,16 +129,9 @@
   </SectionTemplate>
 </template>
 
-<script>
+<script setup>
 import SectionTemplate from '../controls/SectionTemplate.vue';
 import HistoryNode from '../controls/HistoryNode.vue';
-
-export default {
-  components: {
-    HistoryNode,
-    SectionTemplate,
-  },
-};
 </script>
 
 <style scoped>

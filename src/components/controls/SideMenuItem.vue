@@ -7,16 +7,11 @@
   </div>
 </template>
 
-<script>
-export default {
-  props: {
-    pageLink: { type: String, required: true },
-  },
-  methods: {
-    goToPageLink() {
-      window.location.href = `#${this.pageLink}`;
-    },
-  },
+<script setup lang="ts">
+const { pageLink } = defineProps<{ pageLink: string }>();
+
+const goToPageLink = () => {
+  window.location.href = `#${pageLink}`;
 };
 </script>
 

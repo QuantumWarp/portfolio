@@ -13,19 +13,18 @@
   </div>
 </template>
 
-<script>
-export default {
-  props: {
-    imgSrc: { type: String, required: true },
-    appUrl: { type: String, default: null },
-    name: { type: String, required: true },
-  },
-  methods: {
-    navigateToApp() {
-      if (!this.appUrl) return;
-      window.location.href = this.appUrl;
-    },
-  },
+<script setup lang="ts">
+import { ref } from 'vue';
+
+const { appUrl } = defineProps<{
+  imgSrc: string,
+  appUrl: string,
+  name: string,
+}>();
+
+const navigateToApp = () => {
+  if (!appUrl) return;
+  window.location.href = appUrl;
 };
 </script>
 

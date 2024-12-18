@@ -10,25 +10,22 @@
   </span>
 </template>
 
-<script>
-export default {
-  props: {
-    words: { type: Array, required: true },
-  },
-  data: () => ({
-    selectedIndex: 0,
-  }),
-  mounted() {
-    this.interval = setInterval(() => {
-      this.selectedIndex = this.selectedIndex + 1 === this.words.length
-        ? 0
-        : this.selectedIndex + 1;
-    }, 5000);
-  },
-  destroyed() {
-    clearInterval(this.interval);
-  },
-};
+<script setup lang="ts">
+import { onMounted, ref } from 'vue';
+
+const { words } = defineProps<{ words: string[] }>();
+
+let selectedIndex = ref(0);
+
+onMounted(() => {
+  setInterval(() => {
+    if (selectedIndex.value + 1 === words.length) {
+      selectedIndex.value = 0;
+    } else {
+      selectedIndex.value += 1;
+    }
+  }, 5000);
+});
 </script>
 
 <style scopes>

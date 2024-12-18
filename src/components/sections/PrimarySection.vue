@@ -41,16 +41,9 @@
   </section>
 </template>
 
-<script>
+<script setup>
 import MoveDownButton from '../controls/MoveDownButton.vue';
 import TextRotator from '../controls/TextRotator.vue';
-
-export default {
-  components: {
-    MoveDownButton,
-    TextRotator,
-  },
-};
 </script>
 
 <style scoped>

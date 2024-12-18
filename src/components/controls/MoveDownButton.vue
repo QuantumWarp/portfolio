@@ -9,16 +9,11 @@
   </div>
 </template>
 
-<script>
-export default {
-  props: {
-    pageLink: { type: String, required: true },
-  },
-  methods: {
-    moveDown() {
-      window.location.href = `#${this.pageLink}`;
-    },
-  },
+<script setup lang="ts">
+const { pageLink } = defineProps<{ pageLink?: string }>();
+
+const moveDown = () => {
+  window.location.href = `#${pageLink}`;
 };
 </script>
 

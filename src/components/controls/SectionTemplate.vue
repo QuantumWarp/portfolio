@@ -29,14 +29,12 @@
   </section>
 </template>
 
-<script>
-export default {
-  props: {
-    title: { type: String, default: '' },
-    description: { type: String, default: '' },
-    shaded: Boolean,
-  },
-};
+<script setup lang="ts">
+defineProps<{
+  title: string,
+  description: string,
+  shaded: boolean,
+}>();
 </script>
 
 <style lang="scss" scoped>

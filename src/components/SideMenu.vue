@@ -33,27 +33,25 @@
       </SideMenuItem>
     </div>
 
-    <div class="social-links" />
+    <div class="social-links">
+      Social Links TODO
+    </div>
   </div>
 </template>
 
-<script>
+<script setup>
+import { ref, onMounted } from 'vue'
+
 import SideMenuItem from './controls/SideMenuItem.vue';
 
-export default {
-  components: {
-    SideMenuItem,
-  },
-  data: () => ({
-    showName: false,
-  }),
-  mounted() {
-    const el = document.querySelector('#main-home');
-    el.addEventListener('scroll', () => {
-      this.showName = el.scrollTop > window.innerHeight * 0.6;
-    });
-  },
-};
+const showName = ref(false);
+
+onMounted(() => {
+  const el = document.querySelector('#main-home');
+  el.addEventListener('scroll', () => {
+    showName.value = el.scrollTop > window.innerHeight * 0.6;
+  });
+})
 </script>
 
 <style scoped>

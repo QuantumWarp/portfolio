@@ -4,12 +4,10 @@
     @click="$emit('click', $event)"
   >
     <div class="page-button-content">
-      <v-icon
+      <i
         v-if="icon"
-        class="icon"
-        :name="icon"
-        scale="1.8"
-      />
+        class="material-icons"
+      >{{icon}}</i>
 
       <slot />
     </div>

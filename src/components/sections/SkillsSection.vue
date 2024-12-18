@@ -114,6 +114,27 @@ import PageButton from '../controls/PageButton.vue';
 import SectionTemplate from '../controls/SectionTemplate.vue';
 import SkillList from '../controls/SkillList.vue';
 
+import dotnet from '@/assets/tech-icons/dotnet.svg';
+import nodejs from '@/assets/tech-icons/nodejs.svg';
+import javascript from '@/assets/tech-icons/javascript.svg';
+import typescript from '@/assets/tech-icons/typescript.svg';
+import python from '@/assets/tech-icons/python.svg';
+import java from '@/assets/tech-icons/java.svg';
+import vuejs from '@/assets/tech-icons/vuejs.svg';
+import react from '@/assets/tech-icons/react.svg';
+import angular from '@/assets/tech-icons/angular.svg';
+import mysql from '@/assets/tech-icons/mysql.svg';
+import mongodb from '@/assets/tech-icons/mongodb.svg';
+import html5 from '@/assets/tech-icons/html5.svg';
+import git from '@/assets/tech-icons/git.svg';
+import linux from '@/assets/tech-icons/linux.svg';
+import docker from '@/assets/tech-icons/docker.svg';
+import redis from '@/assets/tech-icons/redis.svg';
+import redux from '@/assets/tech-icons/redux.svg';
+import aws from '@/assets/tech-icons/aws.svg';
+import css3 from '@/assets/tech-icons/css3.svg';
+import electron from '@/assets/tech-icons/electron.svg';
+
 export default {
   components: {
     PageButton,
@@ -125,76 +146,76 @@ export default {
     skills: {
       dotnet: {
         name: '.NET / C#',
-        icon: require('@/assets/tech-icons/dotnet.svg'),
+        icon: dotnet,
         info: '.NET Core, MVC, Razor and more',
       },
       nodejs: {
         name: 'Node.js',
-        icon: require('@/assets/tech-icons/nodejs.svg'),
+        icon: nodejs,
       },
       javascript: {
         name: 'Javascript',
-        icon: require('@/assets/tech-icons/javascript.svg'),
+        icon: javascript,
       },
       typescript: {
         name: 'Typescript',
-        icon: require('@/assets/tech-icons/typescript.svg'),
+        icon: typescript,
       },
       python: {
         name: 'Python',
-        icon: require('@/assets/tech-icons/python.svg'),
+        icon: python,
       },
       java: {
         name: 'Java',
-        icon: require('@/assets/tech-icons/java.svg'),
+        icon: java,
       },
       vue: {
         name: 'Vue.js',
-        icon: require('@/assets/tech-icons/vuejs.svg'),
+        icon: vuejs,
       },
       react: {
         name: 'React',
-        icon: require('@/assets/tech-icons/react.svg'),
+        icon: react,
       },
       angular: {
         name: 'Angular',
-        icon: require('@/assets/tech-icons/angular.svg'),
+        icon: angular,
         info: 'Angular 2+',
       },
       mysql: {
         name: 'MySQL',
-        icon: require('@/assets/tech-icons/mysql.svg'),
+        icon: mysql,
       },
       mongodb: {
         name: 'Mongo DB',
-        icon: require('@/assets/tech-icons/mongodb.svg'),
+        icon: mongodb,
         info: 'NoSQL Databases',
       },
       html5: {
         name: 'HTML',
-        icon: require('@/assets/tech-icons/html5.svg'),
+        icon: html5,
       },
       git: {
         name: 'Git',
-        icon: require('@/assets/tech-icons/git.svg'),
+        icon: git,
       },
       linux: {
         name: 'Linux',
-        icon: require('@/assets/tech-icons/linux.svg'),
+        icon: linux,
         info: 'SSH, Bash and various distros',
       },
       docker: {
         name: 'Docker',
-        icon: require('@/assets/tech-icons/docker.svg'),
+        icon: docker,
         info: 'Used in AWS and other deployment pipelines',
       },
       redis: {
         name: 'Redis',
-        icon: require('@/assets/tech-icons/redis.svg'),
+        icon: redis,
       },
       redux: {
         name: 'Redux',
-        icon: require('@/assets/tech-icons/redux.svg'),
+        icon: redux,
       },
       microservices: {
         name: 'Microservices',
@@ -205,16 +226,16 @@ export default {
       },
       aws: {
         name: 'AWS',
-        icon: require('@/assets/tech-icons/aws.svg'),
+        icon: aws,
       },
       css: {
         name: 'CSS',
-        icon: require('@/assets/tech-icons/css3.svg'),
+        icon: css3,
         info: 'Including flexbox and bootstrap',
       },
       electron: {
         name: 'Electron',
-        icon: require('@/assets/tech-icons/electron.svg'),
+        icon: electron,
       },
       sqlserver: {
         name: 'SQLServer',

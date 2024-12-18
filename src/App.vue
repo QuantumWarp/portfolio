@@ -10,24 +10,18 @@
   </div>
 </template>
 
-<script>
+<script setup>
 import Home from './views/Home.vue';
 import SideMenu from './components/SideMenu.vue';
+import { onMounted, ref } from 'vue';
 
-export default {
-  components: {
-    Home,
-    SideMenu,
-  },
-  data: () => ({
-    show: false,
-  }),
-  mounted() {
-    setTimeout(() => {
-      this.show = true;
-    }, 50);
-  },
-};
+const show = ref(false);
+
+onMounted(() => {
+  setTimeout(() => {
+    show.value = true;
+  }, 50);
+})
 </script>
 
 <style lang="scss">
@@ -50,7 +44,7 @@ html, body, #app, .main-content {
   background-color: white;
 }
 #app, .tooltip, button {
-  font-family: 'Montserrat';
+  font-family: Montserrat;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }

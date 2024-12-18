@@ -8,7 +8,7 @@
         class="column"
         name="Fractal Viewer"
         app-url="https://quantumwarp.github.io/fractal-viewer/"
-        :img-src="require('@/assets/app-tiles/fractal-viewer-tile.png')"
+        img-src="@/assets/app-tiles/fractal-viewer-tile.png"
       >
         View, zoom and export images of fractals in this client-side application.
       </AppServiceCard>
@@ -17,7 +17,7 @@
         class="column"
         name="Stitch Patterns"
         app-url="https://quantumwarp.github.io/stitch-patterns/"
-        :img-src="require('@/assets/app-tiles/stitch-patterns.png')"
+        img-src="@/assets/app-tiles/stitch-patterns.png"
       >
         Create and save new knitting patterns.
         Track knitting progress with the row counter and timer.
@@ -26,7 +26,7 @@
       <AppServiceCard
         class="column"
         name="MTG Card Organizer"
-        :img-src="require('@/assets/app-tiles/mtg-card-organizer-tile.png')"
+        img-src="@/assets/app-tiles/mtg-card-organizer-tile.png"
       >
         Organize and sort Magic the Gathering&trade; cards into various collections,
         construct decks and track life totals during games.
@@ -35,7 +35,7 @@
       <AppServiceCard
         class="column"
         name="Simple File Tagger"
-        :img-src="require('@/assets/app-tiles/simple-file-tagger.png')"
+        img-src="@/assets/app-tiles/simple-file-tagger.png"
       >
         A basic desktop application to tag files with dates and custom tags.
       </AppServiceCard>

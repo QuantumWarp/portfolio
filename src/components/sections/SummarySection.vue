@@ -19,7 +19,7 @@
         </span>
 
         <div class="main-points">
-          <span>{{ durationText(new Date(2013, 8, 1)) }} years experience in the industry</span>
+          <!-- <span>{{ durationText(new Date(2013, 8, 1)) }} years experience in the industry</span> -->
           <span>Many projects on my <a href="https://github.com/QuantumWarp">GitHub</a></span>
           <span>Proficient in multiple languages and technologies</span>
           <span>Designing and implementing full, maintainable solutions</span>

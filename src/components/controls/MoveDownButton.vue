@@ -4,15 +4,7 @@
     @click="moveDown"
   >
     <div class="button column">
-      <v-icon
-        name="chevron-down"
-        scale="1.7"
-      />
-
-      <v-icon
-        name="chevron-down"
-        scale="1.7"
-      />
+      <i class="material-icons">keyboard_double_arrow_down</i>
     </div>
   </div>
 </template>

@@ -53,6 +53,7 @@ defineProps<{
   display: flex;
   flex-direction: column;
 }
+
 .header {
   display: flex;
   align-items: center;
@@ -78,6 +79,10 @@ defineProps<{
     }
   }
 }
+.dark .header .marker {
+  box-shadow: 8px 8px darkgrey;
+}
+
 @media only screen and (max-width: 992px) {
   .header {
     .marker {

@@ -23,11 +23,13 @@ import SummarySection from './components/sections/SummarySection.vue';
 
 <style scoped>
 .home {
+  color: var(--color-text-primary);
+  transition: color .2s;
   width: 100%;
   scroll-behavior: smooth;
   overflow-y: auto;
 }
-.home > :nth-child(2n) {
-  background-color: rgb(240, 240, 240);
+.home > :nth-child(2n + 1) {
+  background-color: var(--color-background-alternate);
 }
 </style>

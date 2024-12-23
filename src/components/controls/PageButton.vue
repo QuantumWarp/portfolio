@@ -22,7 +22,8 @@ defineProps<{ icon?: string }>();
 button.page-button {
   outline: none;
   border: none;
-  padding: 1px 1px;
+  padding: 0;
+  background: transparent;
 
   > .page-button-content {
     font-size: 20px;

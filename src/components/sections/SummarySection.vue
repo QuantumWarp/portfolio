@@ -6,7 +6,7 @@
     <div class="content row">
       <img
         class="action-picture column"
-        src="@/assets/action-picture.jpg"
+        src="/main/action-picture.jpg"
       >
 
       <div class="right-content column">

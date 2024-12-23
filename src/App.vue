@@ -28,7 +28,22 @@ onMounted(() => {
 :root {
   --color-primary: #070B5A;
   --color-secondary: #E0871F;
+
+  --color-text-primary: #000;
+  --color-text-secondary: #000;
+  --color-background: rgb(240, 240, 240);
+  --color-background-alternate: white;
+  // --color-tile
 }
+:root .dark {
+  --color-primary: #070B5A;
+  --color-text-primary: #fff;
+  --color-text-secondary: #ddd;
+
+  --color-background: #141414;
+  --color-background-alternate: #212121;
+}
+
 html, body, #app, .main-content {
   margin: 0;
   padding: 0;
@@ -41,7 +56,7 @@ html, body, #app, .main-content {
 }
 .main-content {
   transition: opacity .3s;
-  background-color: white;
+  background-color: var(--color-background);
 }
 #app, .tooltip, button {
   font-family: Montserrat;
@@ -151,8 +166,5 @@ html, body, #app, .main-content {
     opacity: 1;
     transition: opacity .15s;
   }
-}
-.fa-icon {
-  fill: whitesmoke;
 }
 </style>

@@ -1,7 +1,7 @@
 <template>
   <div class="side-menu">
     <div class="top">
-      <img src="@/assets/logo.svg">
+      <img src="/logo.svg">
       <transition name="fade">
         <span
           class="name"
@@ -19,9 +19,6 @@
       <SideMenuItem page-link="about-me">
         About
       </SideMenuItem>
-      <SideMenuItem page-link="skills-and-technology">
-        Skills
-      </SideMenuItem>
       <SideMenuItem page-link="apps-and-services">
         Apps
       </SideMenuItem>
@@ -34,15 +31,23 @@
     </div>
 
     <div class="social-links">
-      Social Links TODO
+      <a :href="githubProfileUrl">
+        <img src="/social/github.svg" />
+      </a>
+      <a :href="linkedinUrl">
+        <img src="/social/linkedin.svg" />
+      </a>
+      <DarkToggle />
     </div>
   </div>
 </template>
 
 <script setup>
-import { ref, onMounted } from 'vue'
+import { ref, onMounted } from 'vue';
+import { linkedinUrl, githubProfileUrl } from "../common/constants.ts"
 
 import SideMenuItem from './controls/SideMenuItem.vue';
+import DarkToggle from './controls/DarkToggle.vue'
 
 const showName = ref(false);
 
@@ -78,6 +83,7 @@ onMounted(() => {
 .side-menu .list {
   margin-top: 8vh;
   flex-direction: column;
+  flex: 1;
   display: flex;
   align-items: center;
 }
@@ -100,6 +106,23 @@ onMounted(() => {
 .name.show {
   opacity: 1;
 }
+.social-links {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+.social-links img, .social-links i {
+  height: 25px;
+  color: black;
+  filter: invert(1);
+  margin-left: 4px;
+  margin-right: 4px;
+}
+a, i {
+  cursor: pointer;
+  user-select: none;
+}
+
 @media only screen and (max-width: 1200px) {
   .side-menu {
     display: none;

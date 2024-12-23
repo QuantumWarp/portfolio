@@ -1,51 +1,33 @@
 <template>
   <div
     class="history-node"
-    :class="{ collapsed: coll }"
+    :class="{ collapsed }"
+    @click="collapsed = !collapsed"
   >
-    <div
-      class="date-info"
-      @mouseover="hovered = true"
-      @mouseout="hovered = false"
-      @click="coll = !coll"
-    >
-      {{ date }}
+    <div class="date-info">
+      {{ entry.date }}
     </div>
 
-    <div
-      class="divider"
-      :class="end"
-      @mouseover="hovered = true"
-      @mouseout="hovered = false"
-      @click="coll = !coll"
-    >
-      <div
-        class="item-dot"
-        :class="{ hovered }"
-      />
+    <div class="divider" :class="top ? 'top' : ''">
+      <div class="item-dot" />
     </div>
 
     <div class="right-info row">
-      <div
-        class="content column"
-        :class="end"
-      >
-        <div
-          class="company-title"
-          @mouseover="hovered = true"
-          @mouseout="hovered = false"
-          @click="coll = !coll"
-        >
-          {{ company }}
+      <div class="content column">
+        <div class="company-title">
+          {{ entry.name }}
         </div>
 
-        <div class="description">
-          <slot name="description" />
+        <div class="tech-icons">
+          <img
+            v-for="icon in entry.technologies"
+            :src="`/tech/${icon}.svg`"
+          />
         </div>
       </div>
 
-      <div class="images column">
-        <slot name="images" />
+      <div class="image">
+        <img :src="entry.image" />
       </div>
     </div>
   </div>
@@ -53,25 +35,19 @@
 
 <script setup lang="ts">
 import { ref } from 'vue';
+import type { HistoryEntry } from '../../common/history.ts';
 
-const { collapsed } = defineProps<{
-  date: string,
-  company: string,
-  link: string,
-  collapsed: boolean,
-  end: string
-}>();
+const { entry, top } = defineProps<{ entry: HistoryEntry, top: boolean }>();
 
-const coll = ref(collapsed);
-const hovered = ref(false);
+const collapsed = ref(!top);
 </script>
 
 <style lang="scss" scoped>
 .history-node {
   display: flex;
   flex-direction: row;
-  max-height: 260px;
-  transition: all 0.5s ease-out;
+  max-height: 200px;
+  transition: all 0.2s ease-out;
 
   &.collapsed {
     max-height: 45px;
@@ -113,7 +89,7 @@ const hovered = ref(false);
     top: -10px;
     height: calc(100% + 10px);
   }
-  &.bottom::after  {
+  &::after  {
     border-radius: 0px 0px 8px 8px;
     height: calc(100% + 15px);
   }
@@ -127,38 +103,24 @@ const hovered = ref(false);
   height: 30px;
   box-shadow: 0px 1px 1px 1px rgba(0, 0, 0, 0.4);
   margin-top: 10px;
-
-  &.hovered {
-    transition: background-color .1s linear;
-    background-color: var(--color-secondary);
-  }
+}
+.history-node:hover .item-dot {
+  transition: background-color .1s linear;
+  background-color: var(--color-secondary);
 }
 .right-info {
   position: relative;
   overflow: hidden;
   flex: 1;
   padding: 12px 0px 15px 0px;
-  padding-right: 15%;
+  padding-right: 10%;
 }
-.content:not(.top)::before {
-  content: '';
-  position: absolute;
-  height: 3px;
-  border-radius: 30%;
-  width: 100%;
-  background-image: linear-gradient(
-    90deg,
-    rgb(255, 255, 255) 0%,
-    rgb(100, 100, 100) 50%,
-    rgb(255, 255, 255) 100%);
-  top: 2px;
-}
-.description, .images, .content::before {
-  transition: opacity 0.5s ease-in-out;
+.tech-icons, .image, .content::before {
+  transition: opacity 0.2s ease-in-out;
   opacity: 1;
 }
 .history-node.collapsed {
-  .description, .images, .content::before {
+  .tech-icons, .image, .content::before {
     opacity: 0;
   }
 }
@@ -167,14 +129,22 @@ const hovered = ref(false);
   font-size: 25px;
   margin-bottom: 10px;
 }
-.images {
-  flex: 0;
+.tech-icons {
+  flex: 1;
   display: flex;
-  justify-content: center;
   align-items: center;
+  height: 25px;
+  font-size: 15px;
 }
-.description {
-  padding: 20px 10%;
+.tech-icons img {
+  height: 25px;
+}
+.image {
+  display: flex;
+  align-items: flex-end;
+}
+.image img {
+  height: 50px;
 }
 @media only screen and (max-width: 992px) {
   .history-node {
@@ -185,14 +155,6 @@ const hovered = ref(false);
   }
   .right-info {
     padding-right: 0px;
-  }
-  .images {
-    flex: 1;
-    margin: 10px 30px 0px 0px;
-  }
-  .description {
-    width: 100%;
-    padding: 20px 10px;
   }
 }
 </style>

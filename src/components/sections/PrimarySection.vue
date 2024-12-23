@@ -2,7 +2,7 @@
   <section class="primary-section">
     <img
       class="logo"
-      src="@/assets/logo.svg"
+      src="/logo.svg"
     >
 
     <div class="background">
@@ -13,7 +13,7 @@
     <div class="content">
       <img
         class="profile-picture"
-        src="@/assets/profile-picture.jpg"
+        src="/main/profile-picture.jpg"
       >
 
       <span class="name">
@@ -76,7 +76,7 @@ import TextRotator from '../controls/TextRotator.vue';
 }
 .background-image {
   background: no-repeat center center fixed;
-  background-image: url('../../assets/background.jpg'), url('../../assets/background-low-res.jpg');
+  background-image: url('/main/background.jpg'), url('/main/background-low-res.jpg');
   background-size: cover;
   height: 100%;
   width: 100%;

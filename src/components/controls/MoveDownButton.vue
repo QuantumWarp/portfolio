@@ -22,6 +22,9 @@ const moveDown = () => {
   cursor: pointer;
   padding: 40px;
 }
+i {
+  font-size: 45px;
+}
 .button {
   position: relative;
   top: 0;

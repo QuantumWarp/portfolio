@@ -14,15 +14,15 @@ export const projects: Project[] = [{
   siteUrl: "https://quantumwarp.github.io/fractal-viewer/",
   githubUrl: "https://github.com/QuantumWarp/fractal-viewer",
   image: "/app/fractal-viewer.png",
-  darkModeImage: "",
+  darkModeImage: "/app/fractal-viewer-dark.png",
   technologies: ["angular", "nodejs"]
 }, {
   name: "Stitch Patterns",
   description: "Create and save new knitting patterns. Track knitting progress with the row counter and timer.",
   siteUrl: "https://quantumwarp.github.io/stitch-patterns/",
   githubUrl: "https://github.com/QuantumWarp/stitch-patterns",
-  image: "",
-  darkModeImage: "",
+  image: "/app/stitch-patterns.png",
+  darkModeImage: "/app/stitch-patterns-dark.png",
   technologies: ["vue"]
 }, {
   name: "MTG Card Creator",

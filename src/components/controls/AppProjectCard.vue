@@ -16,9 +16,11 @@
       </span>
 
       <div class="bottom">
-        <a class="github" :href="githubProfileUrl">
-          <img src="/social/github.svg" />
-        </a>
+        <div>
+          <a v-if="project.githubUrl" class="github" :href.stop="project.githubUrl">
+            <img src="/social/github.svg" />
+          </a>
+        </div>
 
         <div class="tech-icons">
           <img
@@ -30,21 +32,30 @@
     </div>
 
     <div v-if="project.image" class="right">
-      <img :src="project.image">
+      <img :src="(darkMode && project.darkModeImage) ? project.darkModeImage : project.image">
     </div>
   </div>
 </template>
 
 <script setup lang="ts">
-import type { Project } from '../../common/projects.ts';
-import { githubProfileUrl } from '../../common/constants.ts';
+import type { Project } from '@/common/projects.ts';
+import { onMounted, ref } from 'vue';
 
+const appEl = document.getElementById("app");
+const darkMode = ref(appEl.classList.contains('dark'));
 const { project } = defineProps<{ project: Project }>();
 
 const navigateToApp = () => {
   if (!project.siteUrl) return;
   window.location.href = project.siteUrl;
 };
+
+onMounted(() => {
+  const observer = new MutationObserver(() => {
+    darkMode.value = appEl.classList.contains('dark');
+  });
+  observer.observe(appEl, { attributes: true, attributeFilter: ['class'] });
+})
 </script>
 
 <style scoped>
@@ -95,6 +106,12 @@ const navigateToApp = () => {
 .card .right {
   flex: 1;
   min-width: 50%;
+  opacity: 0.75;
+}
+
+.card:hover .right {
+  opacity: 1;
+  transition: opacity 0.2s ease-in;
 }
 
 .card .right img {

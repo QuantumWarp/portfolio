@@ -140,6 +140,7 @@ defineEmits<{
   align-items: center;
   height: 25px;
   font-size: 15px;
+  opacity: 0.8;
 }
 .tech-icons img {
   height: 25px;

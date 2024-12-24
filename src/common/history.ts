@@ -8,13 +8,13 @@ export type HistoryEntry = {
 export const history: HistoryEntry[] = [{
   name: "The Accountancy Partnership",
   date: "Nov 2023",
-  image: "/company/tap.png",
+  image: "/company/tap.webp",
   technologies: ["react", "python", "graphql", "postgres"]
 }, {
   name: "Webeo",
   date: "April 2019",
   image: "/company/webeo.png",
-  technologies: ["vue", "nodejs", "sqlserver", "docker"]
+  technologies: ["vue", "nodejs", "docker"]
 }, {
   name: "Serenity Holidays",
   date: "July 2017",
@@ -23,13 +23,13 @@ export const history: HistoryEntry[] = [{
 }, {
   name: "Nxtera",
   date: "July 2017",
-  image: "/company/nxtera.png",
+  image: "/company/nxtera.jpg",
   technologies: ["csharp", "dotnet"]
 }, {
   name: "Sony",
   date: "2014",
   image: "/company/sony.png",
-  technologies: ["webmethods", "linux"]
+  technologies: ["java", "linux"]
 }, {
   name: "Barclays",
   date: "2013",

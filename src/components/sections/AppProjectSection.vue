@@ -1,10 +1,10 @@
 <template>
   <SectionTemplate
-    title="Apps and Services"
-    description="Creations I have made"
+    title="Apps and Projects"
+    description="Creations made by me"
   >
     <div class="app-tiles">
-      <AppServiceCard
+      <AppProjectCard
         v-for="project in projects"
         class="column"
         :project="project"
@@ -15,7 +15,7 @@
 
 <script setup>
 import SectionTemplate from '../controls/SectionTemplate.vue';
-import AppServiceCard from '../controls/AppServiceCard.vue';
+import AppProjectCard from '../controls/AppProjectCard.vue';
 import { projects } from '@/common/projects.ts';
 </script>
 

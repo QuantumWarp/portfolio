@@ -4,12 +4,12 @@
     @click="$emit('click', $event)"
   >
     <div class="page-button-content">
+      <slot />
+
       <i
         v-if="icon"
         class="material-icons"
       >{{icon}}</i>
-
-      <slot />
     </div>
   </button>
 </template>
@@ -43,10 +43,14 @@ button.page-button {
     background-position: right bottom;
     transition: background-position .2s linear, color .2s linear;
 
+    i {
+      margin-left: 10px;
+    }
+
     &:hover {
       color: lightgrey;
       background-position: left top;
-      transition: background-position .4s linear, color .4s linear;
+      transition: background-position .2s linear, color .2s linear;
     }
   }
 }

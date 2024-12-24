@@ -5,7 +5,7 @@
   >
     <PrimarySection id="home" />
     <SummarySection id="about-me" />
-    <AppServiceSection id="apps-and-services" />
+    <AppProjectSection id="apps-and-services" />
     <HistorySection id="history" />
     <ContactSection id="contact-me" />
     <FooterSection />
@@ -13,7 +13,7 @@
 </template>
 
 <script setup>
-import AppServiceSection from './components/sections/AppServiceSection.vue';
+import AppProjectSection from './components/sections/AppProjectSection.vue';
 import ContactSection from './components/sections/ContactSection.vue';
 import FooterSection from './components/sections/FooterSection.vue';
 import HistorySection from './components/sections/HistorySection.vue';

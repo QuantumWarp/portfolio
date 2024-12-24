@@ -1,10 +1,5 @@
 <template>
   <footer class="footer-section">
-    <span class="powered-by">
-      Powered by Vue.js
-      <img src="/tech/vue.svg">
-    </span>
-
     <span class="copyright">
       &copy; {{ new Date().getFullYear() }} - John Lowther
     </span>
@@ -21,16 +16,5 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-}
-.powered-by {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  margin-bottom: 20px;
-
-  > img {
-    margin-left: 5px;
-    height: 25px;
-  }
 }
 </style>

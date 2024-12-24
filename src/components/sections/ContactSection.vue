@@ -20,7 +20,7 @@
 
         <div class="send">
           <PageButton
-            icon="envelope"
+            icon="send"
             @click="sendEmail"
           >
             Send Message
@@ -61,6 +61,7 @@ input[type=text], textarea {
 .send {
   display: flex;
   justify-content: flex-end;
+  margin-top: 10px;
 }
 .container {
   display: flex;

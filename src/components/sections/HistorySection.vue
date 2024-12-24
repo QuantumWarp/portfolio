@@ -10,7 +10,7 @@
           :top="index === 0"
           :entry="entry"
           :collapsed="selectedIndex !== index"
-          @click="selectedIndex = index"
+          @click="selectedIndex = (selectedIndex === index ? -1 : index)"
         />
       </div>
     </div>
@@ -23,7 +23,7 @@ import HistoryNode from '../controls/HistoryNode.vue';
 import { history } from '../../common/history.ts';
 import { ref } from 'vue';
 
-const selectedIndex = ref(0);
+const selectedIndex = ref(-1);
 </script>
 
 <style scoped>

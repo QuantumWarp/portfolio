@@ -31,8 +31,8 @@ onMounted(() => {
 
   --color-text-primary: #000;
   --color-text-secondary: #000;
-  --color-background: rgb(240, 240, 240);
-  --color-background-alternate: white;
+  --color-background: white;
+  --color-background-alternate: rgb(240, 240, 240);
   // --color-tile
 }
 :root .dark {

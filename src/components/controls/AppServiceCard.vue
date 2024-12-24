@@ -84,6 +84,7 @@ const navigateToApp = () => {
 }
 .card .left .name {
   font-size: 25px;
+  color: var(--color-text-primary);
 }
 .card .left .description {
   flex: 1;

@@ -24,17 +24,6 @@
           <span>Proficient in multiple languages and technologies</span>
           <span>Designing and implementing full, maintainable solutions</span>
         </div>
-
-        <div class="download">
-          <a
-            href="John Lowther - 2301 - CV.docx"
-            style="text-decoration: none"
-          >
-            <PageButton v-tooltip="'CV not up to date with current job information'">
-              Download CV
-            </PageButton>
-          </a>
-        </div>
       </div>
     </div>
   </SectionTemplate>
@@ -42,7 +31,6 @@
 
 <script setup>
 import SectionTemplate from '../controls/SectionTemplate.vue';
-import PageButton from '../controls/PageButton.vue';
 </script>
 
 <style lang="scss" scoped>

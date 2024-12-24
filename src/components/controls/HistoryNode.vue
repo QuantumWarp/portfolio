@@ -2,7 +2,7 @@
   <div
     class="history-node"
     :class="{ collapsed }"
-    @click="collapsed = !collapsed"
+    @click="$emit('click')"
   >
     <div class="date-info">
       {{ entry.date }}
@@ -34,20 +34,25 @@
 </template>
 
 <script setup lang="ts">
-import { ref } from 'vue';
 import type { HistoryEntry } from '../../common/history.ts';
 
-const { entry, top } = defineProps<{ entry: HistoryEntry, top: boolean }>();
+const { entry, top, collapsed } = defineProps<{
+  entry: HistoryEntry,
+  top: boolean,
+  collapsed: boolean,
+}>();
 
-const collapsed = ref(!top);
+defineEmits<{ 
+  click: []
+}>();
 </script>
 
 <style lang="scss" scoped>
 .history-node {
   display: flex;
   flex-direction: row;
-  max-height: 200px;
-  transition: all 0.2s ease-out;
+  max-height: 110px;
+  transition: all 0.2s linear;
 
   &.collapsed {
     max-height: 45px;
@@ -140,8 +145,13 @@ const collapsed = ref(!top);
   height: 25px;
 }
 .image {
+  display: inline-block;
+  padding: 20px;
   display: flex;
   align-items: flex-end;
+}
+.dark .image {
+  background: radial-gradient(ellipse, rgba(255, 255, 255, 0.2) 0%, rgba(0, 0, 0, 0) 75%);
 }
 .image img {
   height: 50px;

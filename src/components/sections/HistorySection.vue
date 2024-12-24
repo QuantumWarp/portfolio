@@ -9,6 +9,8 @@
           v-for="(entry, index) in history"
           :top="index === 0"
           :entry="entry"
+          :collapsed="selectedIndex !== index"
+          @click="selectedIndex = index"
         />
       </div>
     </div>
@@ -19,6 +21,9 @@
 import SectionTemplate from '../controls/SectionTemplate.vue';
 import HistoryNode from '../controls/HistoryNode.vue';
 import { history } from '../../common/history.ts';
+import { ref } from 'vue';
+
+const selectedIndex = ref(0);
 </script>
 
 <style scoped>
@@ -28,6 +33,7 @@ import { history } from '../../common/history.ts';
 }
 .history-area {
   max-width: 1200px;
+  width: 800px;
 }
 img {
   width: 150px;

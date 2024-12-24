@@ -1,8 +1,5 @@
 <template>
-  <section
-    class="section-template"
-    :class="{ shaded }"
-  >
+  <section class="section-template">
     <div class="container">
       <div class="header">
         <div class="marker" />
@@ -33,7 +30,6 @@
 defineProps<{
   title: string,
   description: string,
-  shaded: boolean,
 }>();
 </script>
 
@@ -45,6 +41,7 @@ defineProps<{
 
   .content {
     padding: 10px 5% 0 5%;
+    color: var(--color-text-secondary)
   }
 }
 .container {
@@ -76,6 +73,7 @@ defineProps<{
 
     .description {
       font-size: 18px;
+      color: var(--color-text-secondary)
     }
   }
 }

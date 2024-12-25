@@ -1,7 +1,7 @@
 <template>
-  <div
+  <a
     class="card"
-    @click="navigateToApp"
+    :href="project.siteUrl"
   >
     <div class="left">
       <span class="name">{{ project.name }}</span>
@@ -26,6 +26,8 @@
           <img
             v-for="icon in project.technologies"
             :src="`/tech/${icon}.svg`"
+            :title="Case.title(icon)"
+            :alt="Case.title(icon)"
           />
         </div>
       </div>
@@ -34,21 +36,17 @@
     <div v-if="project.image" class="right">
       <img :src="(darkMode && project.darkModeImage) ? project.darkModeImage : project.image">
     </div>
-  </div>
+  </a>
 </template>
 
 <script setup lang="ts">
 import type { Project } from '@/common/projects.ts';
+import Case from 'case';
 import { onMounted, ref } from 'vue';
 
-const appEl = document.getElementById("app");
+const appEl = document.getElementById("app")!;
 const darkMode = ref(appEl.classList.contains('dark'));
 const { project } = defineProps<{ project: Project }>();
-
-const navigateToApp = () => {
-  if (!project.siteUrl) return;
-  window.location.href = project.siteUrl;
-};
 
 onMounted(() => {
   const observer = new MutationObserver(() => {
@@ -60,6 +58,7 @@ onMounted(() => {
 
 <style scoped>
 .card {
+  all: unset;
   position: relative;
   width: min(80%, 1000px);
   border-radius: 5px;
@@ -77,14 +76,16 @@ onMounted(() => {
 }
 .dark .card {
   background-color: black;
-  border: 1px solid darkgray;
+  border: 1px solid #666;
 }
 .card:hover {
   box-shadow: 0px 5px 10px -5px;
   top: -5px;
   transition: all 0.3s;
 }
-
+.dark .card:hover {
+  box-shadow: 0px 5px 3px -5px;
+}
 .card .left {
   flex: 1;
   display: flex;
@@ -123,9 +124,15 @@ onMounted(() => {
   display: flex;
   font-size: small;
   color: green;
+  opacity: 0;
   ::before {
     content: "● ";
   }
+}
+.card:hover .badges {
+  opacity: 1;
+  transition: opacity 0.2s ease-in;
+  transition-delay: 0.2s;
 }
 .github {
   display: flex;
@@ -158,6 +165,6 @@ onMounted(() => {
   transition-delay: 0.2s;
 }
 .tech-icons img {
-  margin-left: 1px;
+  margin-left: 3px;
 }
 </style>

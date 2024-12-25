@@ -22,6 +22,8 @@
           <img
             v-for="icon in entry.technologies"
             :src="`/tech/${icon}.svg`"
+            :title="Case.title(icon)"
+            :alt="Case.title(icon)"
           />
         </div>
       </div>
@@ -34,6 +36,7 @@
 </template>
 
 <script setup lang="ts">
+import Case from 'case';
 import type { HistoryEntry } from '../../common/history.ts';
 
 const { entry, top, collapsed } = defineProps<{
@@ -144,6 +147,7 @@ defineEmits<{
 }
 .tech-icons img {
   height: 25px;
+  margin-right: 5px;
 }
 .image {
   display: inline-block;

@@ -6,6 +6,7 @@
     <div class="app-tiles">
       <AppProjectCard
         v-for="project in projects"
+        v-bind:key="project.name"
         class="column"
         :project="project"
       />
@@ -13,10 +14,10 @@
   </SectionTemplate>
 </template>
 
-<script setup>
-import SectionTemplate from '../controls/SectionTemplate.vue';
-import AppProjectCard from '../controls/AppProjectCard.vue';
+<script setup lang="ts">
 import { projects } from '@/common/projects.ts';
+import SectionTemplate from '@/components/controls/SectionTemplate.vue';
+import AppProjectCard from '@/components/controls/AppProjectCard.vue';
 </script>
 
 <style lang="scss" scoped>

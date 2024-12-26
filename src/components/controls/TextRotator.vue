@@ -15,7 +15,7 @@ import { onMounted, ref } from 'vue';
 
 const { words } = defineProps<{ words: string[] }>();
 
-let selectedIndex = ref(0);
+const selectedIndex = ref(0);
 
 onMounted(() => {
   setInterval(() => {

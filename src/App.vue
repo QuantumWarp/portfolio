@@ -5,15 +5,15 @@
       :style="show ? {} : { opacity: 0 }"
     >
       <SideMenu />
-      <Home />
+      <HomePage />
     </div>
   </div>
 </template>
 
-<script setup>
-import Home from './Home.vue';
-import SideMenu from './components/SideMenu.vue';
+<script setup lang="ts">
 import { onMounted, ref } from 'vue';
+import HomePage from '@/HomePage.vue';
+import SideMenu from '@/components/SideMenu.vue';
 
 const show = ref(false);
 

@@ -7,6 +7,7 @@
       <div class="history-area">
         <HistoryNode
           v-for="(entry, index) in history"
+          v-bind:key="entry.name"
           :top="index === 0"
           :entry="entry"
           :collapsed="selectedIndex !== index"
@@ -17,11 +18,11 @@
   </SectionTemplate>
 </template>
 
-<script setup>
-import SectionTemplate from '../controls/SectionTemplate.vue';
-import HistoryNode from '../controls/HistoryNode.vue';
-import { history } from '../../common/history.ts';
+<script setup lang="ts">
 import { ref } from 'vue';
+import { history } from '@/common/history.ts';
+import SectionTemplate from '@/components/controls/SectionTemplate.vue';
+import HistoryNode from '@/components/controls/HistoryNode.vue';
 
 const selectedIndex = ref(-1);
 </script>

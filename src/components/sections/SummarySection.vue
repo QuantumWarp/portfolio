@@ -29,9 +29,9 @@
   </SectionTemplate>
 </template>
 
-<script setup>
+<script setup lang="ts">
 import { yearsFromDate } from "@/common/duration.ts";
-import SectionTemplate from '../controls/SectionTemplate.vue';
+import SectionTemplate from '@/components/controls/SectionTemplate.vue';
 </script>
 
 <style lang="scss" scoped>

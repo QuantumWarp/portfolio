@@ -2,14 +2,12 @@
   <div class="side-menu">
     <div class="top">
       <img src="/logo.svg">
-      <transition name="fade">
-        <span
-          class="name"
-          :class="showName ? 'show' : ''"
-        >
-          John <span class="surname">Lowther</span>
-        </span>
-      </transition>
+      <span
+        class="name"
+        :class="showName ? 'show' : ''"
+      >
+        John <span class="surname">Lowther</span>
+      </span>
     </div>
 
     <div class="list">
@@ -42,12 +40,12 @@
   </div>
 </template>
 
-<script setup>
+<script setup lang="ts">
 import { ref, onMounted } from 'vue';
-import { linkedinUrl, githubProfileUrl } from "../common/constants.ts"
+import { linkedinUrl, githubProfileUrl } from "@/common/constants.ts"
 
-import SideMenuItem from './controls/SideMenuItem.vue';
-import DarkToggle from './controls/DarkToggle.vue'
+import SideMenuItem from '@/components/controls/SideMenuItem.vue';
+import DarkToggle from '@/components/controls/DarkToggle.vue'
 
 const showName = ref(false);
 

@@ -31,17 +31,17 @@
   </SectionTemplate>
 </template>
 
-<script setup>
-import SectionTemplate from '../controls/SectionTemplate.vue';
-import PageButton from '../controls/PageButton.vue';
-
+<script setup lang="ts">
 import { ref } from 'vue';
+import { encodedEmail } from '@/common/constants.ts';
+import SectionTemplate from '@/components/controls/SectionTemplate.vue';
+import PageButton from '@/components/controls/PageButton.vue';
 
 const subject = ref('');
 const message = ref('');
 
 const sendEmail = () => {
-  const email = atob('ancubG93dGhlckBob3RtYWlsLmNvLnVr');
+  const email = encodedEmail;
   const encodedSubject = `subject=${encodeURIComponent(subject.value)}`;
   const encodedMessage = `body=${encodeURIComponent(message.value)}`;
   window.location.href = `mailto:${email}?${encodedSubject}&${encodedMessage}`;

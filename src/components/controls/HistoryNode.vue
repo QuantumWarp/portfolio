@@ -21,7 +21,8 @@
         <div class="tech-icons">
           <img
             v-for="icon in entry.technologies"
-            :src="`/tech/${icon}.svg`"
+            v-bind:key="icon"
+            :src="`./tech/${icon}.svg`"
             :title="Case.title(icon)"
             :alt="Case.title(icon)"
           />
@@ -37,7 +38,7 @@
 
 <script setup lang="ts">
 import Case from 'case';
-import type { HistoryEntry } from '../../common/history.ts';
+import type { HistoryEntry } from '@/common/history.ts';
 
 const { entry, top, collapsed } = defineProps<{
   entry: HistoryEntry,

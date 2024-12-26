@@ -1,5 +1,3 @@
-const year = 1000 * 60 * 60 * 24 * 365;
-
 export const yearsFromDate = (date: Date) => {
   const difMs = Date.now() - date.getTime();
   const dateFromEpoch = new Date(difMs);

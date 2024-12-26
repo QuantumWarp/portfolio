@@ -12,13 +12,13 @@
   </div>
 </template>
 
-<script setup>
-import AppProjectSection from './components/sections/AppProjectSection.vue';
-import ContactSection from './components/sections/ContactSection.vue';
-import FooterSection from './components/sections/FooterSection.vue';
-import HistorySection from './components/sections/HistorySection.vue';
-import PrimarySection from './components/sections/PrimarySection.vue';
-import SummarySection from './components/sections/SummarySection.vue';
+<script setup lang="ts">
+import PrimarySection from '@/components/sections/PrimarySection.vue';
+import SummarySection from '@/components/sections/SummarySection.vue';
+import AppProjectSection from '@/components/sections/AppProjectSection.vue';
+import HistorySection from '@/components/sections/HistorySection.vue';
+import ContactSection from '@/components/sections/ContactSection.vue';
+import FooterSection from '@/components/sections/FooterSection.vue';
 </script>
 
 <style scoped>

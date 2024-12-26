@@ -17,7 +17,7 @@
 
       <div class="bottom">
         <div>
-          <a v-if="project.githubUrl" class="github" :href.stop="project.githubUrl">
+          <a v-if="project.githubUrl" class="github" :href="project.githubUrl">
             <img src="/social/github.svg" />
           </a>
         </div>
@@ -25,7 +25,8 @@
         <div class="tech-icons">
           <img
             v-for="icon in project.technologies"
-            :src="`/tech/${icon}.svg`"
+            v-bind:key="icon"
+            :src="`./tech/${icon}.svg`"
             :title="Case.title(icon)"
             :alt="Case.title(icon)"
           />
@@ -40,9 +41,9 @@
 </template>
 
 <script setup lang="ts">
-import type { Project } from '@/common/projects.ts';
-import Case from 'case';
 import { onMounted, ref } from 'vue';
+import Case from 'case';
+import type { Project } from '@/common/projects.ts';
 
 const appEl = document.getElementById("app")!;
 const darkMode = ref(appEl.classList.contains('dark'));

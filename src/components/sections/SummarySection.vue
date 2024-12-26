@@ -11,25 +11,26 @@
 
       <div class="right-content column">
         <span class="summary-text">
-          Hi, I'm John, I am a Full Stack software engineer with over 9 years of experience working
-          in the industry. My primary expertise is in React, Vue, .NET and Node.js, all of which I
-          have used extensively to create new products and solutions in both a professional and
+          Hi, I'm John, I am a Full Stack software engineer with over
+          <b>{{ yearsFromDate(new Date(2013, 8, 1)) }} years</b>
+          of experience working in the industry. My primary expertise is in React and Node.js,
+          which I have used extensively to create new products and solutions in both a professional and
           personal capacity. I always have something I am working on, but don't hesitate to ask me
           any questions.
         </span>
 
-        <div class="main-points">
-          <!-- <span>{{ durationText(new Date(2013, 8, 1)) }} years experience in the industry</span> -->
-          <span>Many projects on my <a href="https://github.com/QuantumWarp">GitHub</a></span>
-          <span>Proficient in multiple languages and technologies</span>
-          <span>Designing and implementing full, maintainable solutions</span>
-        </div>
+        <ul class="main-points">
+          <li>Proficient in multiple languages and technologies.</li>
+          <li>Designing and implementing full, maintainable solutions.</li>
+          <li>Many projects on my <a href="https://github.com/QuantumWarp">GitHub</a>. More detailed links and information below.</li>
+        </ul>
       </div>
     </div>
   </SectionTemplate>
 </template>
 
 <script setup>
+import { yearsFromDate } from "@/common/duration.ts";
 import SectionTemplate from '../controls/SectionTemplate.vue';
 </script>
 
@@ -39,7 +40,7 @@ import SectionTemplate from '../controls/SectionTemplate.vue';
   max-width: 50%;
   height: 450px;
   max-height: 80vw;
-  border-radius: 20px 80px;
+  border-radius: 15px 60px;
 }
 .content {
   display: flex;
@@ -61,17 +62,6 @@ import SectionTemplate from '../controls/SectionTemplate.vue';
 
   > span {
     position: relative;
-  }
-
-  > span::before{
-    content: '';
-    position: absolute;
-    border-radius: 50%;
-    background-color: black;
-    top: 10px;
-    left: -10px;
-    height: 5px;
-    width: 5px;
   }
 }
 .download {

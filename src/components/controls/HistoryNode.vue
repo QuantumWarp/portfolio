@@ -171,5 +171,8 @@ defineEmits<{
   .right-info {
     padding-right: 0px;
   }
+  .image {
+    display: none;
+  }
 }
 </style>

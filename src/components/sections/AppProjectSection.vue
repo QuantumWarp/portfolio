@@ -23,6 +23,13 @@ import { projects } from '@/common/projects.ts';
 .app-tiles {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  margin-left: 20px;
+  margin-top: 20px;
+}
+@media only screen and (max-width: 1200px) {
+  .app-tiles {
+    margin-left: 0px;
+    align-items: center;
+  }
 }
 </style>

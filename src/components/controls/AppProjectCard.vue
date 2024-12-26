@@ -60,7 +60,7 @@ onMounted(() => {
 .card {
   all: unset;
   position: relative;
-  width: min(80%, 1000px);
+  width: min(90%, 800px);
   border-radius: 5px;
   background-color: white;
   border: 1px solid lightgrey;
@@ -71,12 +71,14 @@ onMounted(() => {
   transition: all 0.1s;
   margin-bottom: 10px;
   min-height: 200px;
+  height: 200px;
   max-height: 200px;
   overflow: hidden;
 }
 .dark .card {
   background-color: black;
   border: 1px solid #666;
+  color: var(--color-text-secondary);
 }
 .card:hover {
   box-shadow: 0px 5px 10px -5px;
@@ -87,7 +89,9 @@ onMounted(() => {
   box-shadow: 0px 5px 3px -5px;
 }
 .card .left {
-  flex: 1;
+  width: 50%;
+  max-width: 50%;
+  box-sizing: border-box;  
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -101,12 +105,16 @@ onMounted(() => {
 .card .left .description {
   flex: 1;
   font-size: 15px;
-  margin-top: 6px;
+  margin-top: 5px;
+  display: flex;
+  align-items: center;
 }
 
 .card .right {
-  flex: 1;
-  min-width: 50%;
+  height: 100%;
+  max-height: 100%;
+  width: 50%;
+  max-width: 50%;
   opacity: 0.75;
 }
 
@@ -149,6 +157,7 @@ onMounted(() => {
   width: 100%;
   display: flex;
   align-items: center;
+  margin-top: 20px;
 }
 .tech-icons {
   flex: 1;
@@ -166,5 +175,25 @@ onMounted(() => {
 }
 .tech-icons img {
   margin-left: 3px;
+}
+@media only screen and (max-width: 992px) {
+  .card {
+    flex-direction: column;
+    height: 350px;
+    max-height: 350px;
+    margin-bottom: 20px;
+  }
+  .card .left {
+    height: 50%;
+    max-height: 50%;
+    width: 100%;
+    max-width: 100%;
+  }
+  .card .right {
+    height: 50%;
+    max-height: 50%;
+    width: 100%;
+    max-width: 100%;
+  }
 }
 </style>

@@ -1,13 +1,14 @@
+const year = 1000 * 60 * 60 * 24 * 365;
 
-// Vue.mixin({
-//   methods: {
-//     durationText: (dateStarted) => {
-//       const durationDifMs = Date.now() - dateStarted;
-//       const durationDate = new Date(durationDifMs);
-//       // Add months to round to nearest year
-//       durationDate.setMonth(durationDate.getMonth() + 6);
-//       const years = Math.abs(durationDate.getUTCFullYear() - 1970);
-//       return years > 1 ? `${years} years` : 'year';
-//     },
-//   },
-// });
+export const yearsFromDate = (date: Date) => {
+  const difMs = Date.now() - date.getTime();
+  const dateFromEpoch = new Date(difMs);
+  const years = Math.abs(dateFromEpoch.getUTCFullYear() - 1970);
+
+  if (years <= 6) return years;
+
+  const lowerMultipleOf5 = Math.floor(years / 5) * 5;
+  const lowerMultipleOf2 = Math.floor(years / 2) * 2;
+
+  return Math.max(lowerMultipleOf5, lowerMultipleOf2);
+};

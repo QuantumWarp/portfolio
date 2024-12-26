@@ -17,7 +17,7 @@
       <SideMenuItem page-link="about-me">
         About
       </SideMenuItem>
-      <SideMenuItem page-link="apps-and-services">
+      <SideMenuItem page-link="apps-and-projects">
         Apps
       </SideMenuItem>
       <SideMenuItem page-link="history">

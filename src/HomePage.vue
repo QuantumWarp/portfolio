@@ -5,7 +5,7 @@
   >
     <PrimarySection id="home" />
     <SummarySection id="about-me" />
-    <AppProjectSection id="apps-and-services" />
+    <AppProjectSection id="apps-and-projects" />
     <HistorySection id="history" />
     <ContactSection id="contact-me" />
     <FooterSection />

@@ -2,6 +2,7 @@
   <a
     class="card"
     :href="project.siteUrl"
+    @click.prevent="navigateToApp"
   >
     <div class="left">
       <span class="name">{{ project.name }}</span>
@@ -17,7 +18,12 @@
 
       <div class="bottom">
         <div>
-          <a v-if="project.githubUrl" class="github" :href="project.githubUrl">
+          <a
+            v-if="project.githubUrl"
+            class="github"
+            :href="project.githubUrl"
+            @click.prevent.stop="navigateToGithub"
+          >
             <img src="/social/github.svg" />
           </a>
         </div>
@@ -48,6 +54,16 @@ import type { Project } from '@/common/projects.ts';
 const appEl = document.getElementById("app")!;
 const darkMode = ref(appEl.classList.contains('dark'));
 const { project } = defineProps<{ project: Project }>();
+
+const navigateToApp = () => {
+  history.replaceState(null, '', '#apps-and-projects');
+  window.location.href = project.siteUrl;
+};
+
+const navigateToGithub = () => {
+  history.replaceState(null, '', '#apps-and-projects');
+  window.location.href = project.githubUrl;
+};
 
 onMounted(() => {
   const observer = new MutationObserver(() => {

@@ -46,7 +46,7 @@ const { entry, top, collapsed } = defineProps<{
   collapsed: boolean,
 }>();
 
-defineEmits<{ 
+defineEmits<{
   click: []
 }>();
 </script>

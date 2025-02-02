@@ -3,8 +3,8 @@ import { githubProfileUrl, githubSitePrefix } from "./constants";
 export type Project = {
   name: string;
   description: string;
-  siteUrl?: string;
-  githubUrl?: string;
+  siteUrl: string;
+  githubUrl: string;
   image: string;
   darkModeImage?: string;
   technologies: string[];

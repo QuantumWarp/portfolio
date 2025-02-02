@@ -50,7 +50,7 @@ import DarkToggle from '@/components/controls/DarkToggle.vue'
 const showName = ref(false);
 
 onMounted(() => {
-  const el = document.querySelector('#main-home');
+  const el = document.querySelector('#main-home')!;
   el.addEventListener('scroll', () => {
     showName.value = el.scrollTop > window.innerHeight * 0.6;
   });

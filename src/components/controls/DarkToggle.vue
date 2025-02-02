@@ -7,7 +7,7 @@
 <script setup lang="ts">
 import { ref } from 'vue';
 
-const el = document.getElementById("app");
+const el = document.getElementById("app")!;
 let localDark = localStorage.getItem("portfolio-dark");
 
 if (!localDark) {
@@ -27,7 +27,7 @@ const toggleDark = () => {
   else el.classList.add("dark");
 
   darkMode.value = !darkMode.value;
-  localStorage.setItem("portfolio-dark", darkMode.value);
+  localStorage.setItem("portfolio-dark", darkMode.value.toString());
 };
 </script>
 

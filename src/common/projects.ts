@@ -43,6 +43,14 @@ export const projects: Project[] = [{
   darkModeImage: "./app/stitch-patterns-dark.png",
   technologies: ["vue"]
 }, {
+  name: "Paint Inventory",
+  description: "An app I use to organise and search through paints I have available for painting miniatures.",
+  siteUrl: githubSitePrefix + "/paint-inventory/",
+  githubUrl: githubProfileUrl + "/paint-inventory",
+  image: "./app/paint-inventory.png",
+  darkModeImage: "./app/paint-inventory-dark.png",
+  technologies: ["react"]
+}, {
   name: "Satisfactory Planner",
   description: "Allows the creation of clear and readable factory plans.",
   siteUrl: githubSitePrefix + "/satisfactory-planner/",
